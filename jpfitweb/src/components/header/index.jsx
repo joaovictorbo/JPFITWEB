@@ -6,9 +6,9 @@ export default function Header() {
         <div className = {styles.header}>
             <img src="" alt="" className={styles.logo} />
             <ul className={styles.menu}>
-                <li> Mensagens </li>
+                <li> <Link to='/messages'> Mensagens </Link></li>
                 <li> Alunos </li>
-                <li> Avisos</li>
+                <li> <Link to='/alerts'> Avisos </Link></li>
                 <li> Meus Treinos</li>
                 <li> <Link to='/profile'> Perfil </Link></li>
             </ul>
