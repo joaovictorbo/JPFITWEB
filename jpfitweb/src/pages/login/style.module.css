@@ -1,0 +1,61 @@
+.login {
+  background-image: url("../../assets/2.png");
+  width: 100vw;
+  height: 100vh;
+  background-size: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 400px;
+}
+
+.image {
+  width: 300px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.imput {
+  padding: 10px;
+  width: 380px;
+  border: 0;
+  border-bottom: 3px solid white;
+  background-color: transparent;
+  outline: 0;
+  color: #ffffff;
+}
+
+::-webkit-input-placeholder {
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.entrar {
+  background-color: white;
+  color: #012a50;
+  border-radius: 80px;
+  width: 100px;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.cadastrar {
+  font-size: 16px;
+}
+
+.cadastrarLink {
+  color: #ffffff;
+}
