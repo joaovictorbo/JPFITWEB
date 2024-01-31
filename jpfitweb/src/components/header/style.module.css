@@ -1,0 +1,24 @@
+.header {
+    background-color:#012a50;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    color: white;
+    
+    
+}
+
+.logo {
+    width: 48vw;
+}
+
+.menu { 
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+    width: 48vw;
+    justify-content: flex-end;
+    padding: 10px;
+    margin-right: 20px;
+    font-size: 20px;
+}
