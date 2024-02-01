@@ -40,11 +40,11 @@
   font-size: 16px;
 }
 
-.entrar {
+.loginButton {
   background-color: white;
   color: #012a50;
   border-radius: 80px;
-  width: 100px;
+  width: 130px;
   padding: 5px;
   text-align: center;
   text-decoration: none;
@@ -54,6 +54,7 @@
 
 .cadastrar {
   font-size: 16px;
+  margin: 0;
 }
 
 .cadastrarLink {

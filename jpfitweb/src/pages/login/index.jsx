@@ -17,7 +17,7 @@ export default function Login() {
           <input type="password" placeholder="Senha" className={style.imput} />
         </div>
 
-        <Link className={style.entrar} to="./home">Login</Link>
+        <Link className={style.loginButton} to="./home">Login</Link>
         <p className={style.cadastrar}>Não possui uma conta?   <Link className={style.cadastrarLink} to="/register">Cadastrar</Link></p>
       </div>
     </div>
