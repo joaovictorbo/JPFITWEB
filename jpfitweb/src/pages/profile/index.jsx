@@ -14,7 +14,7 @@ export default function Profile() {
 
           <h1>Prof. Rennan Alves</h1>
           <div className={style.links}>
-            <Link className={style.link}> Dados Pessoais </Link>
+            <Link className={style.link} to="/user-data"> Dados Pessoais </Link>
             <Link className={style.link} to="/password-end-security">
               Senha e Segurança
             </Link>
