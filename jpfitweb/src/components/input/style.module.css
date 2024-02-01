@@ -1,0 +1,11 @@
+::-webkit-input-placeholder {
+    color: darkgray;
+    font-size: 16px;
+  }
+
+  .input {
+    padding: 20px;
+    border-radius: 100px;
+    border: 0;
+    font-weight: 400;
+  }

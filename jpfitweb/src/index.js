@@ -11,6 +11,7 @@ import Home from './pages/home/index';
 import Profile from './pages/profile/index';
 import Messages from './pages/messages/index';
 import Alerts from './pages/alerts/index';
+import Security from './pages/security';
 
 const router = createBrowserRouter([
       {
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
       {
         path: "/alerts",
         element: <Alerts />,
+      },
+      {
+        path: "/password-end-security",
+        element: <Security/>
       }
   
 ]);

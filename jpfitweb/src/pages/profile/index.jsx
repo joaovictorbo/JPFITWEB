@@ -4,7 +4,7 @@ import Header from "../../components/header";
 import logoFit from "../../assets/logoFit.png";
 import fotoPerfil from "../../assets/fotoPerfilExemplo.png";
 
-export default function Progile() {
+export default function Profile() {
   return (
     <div className={style.profilePage}>
       <Header />
@@ -15,10 +15,11 @@ export default function Progile() {
           <h1>Prof. Rennan Alves</h1>
           <div className={style.links}>
             <Link className={style.link}> Dados Pessoais </Link>
-            <Link className={style.link}> Senha e Segurança </Link>
+            <Link className={style.link} to="/password-end-security">
+              Senha e Segurança
+            </Link>
             <Link className={style.link} to="/">
-              {" "}
-              Sair{" "}
+              Sair
             </Link>
           </div>
         </div>

@@ -1,0 +1,38 @@
+.profilePage {
+  background-image: url("../../assets/5.png");
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 87px);
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  width: 250px;
+}
+
+.password {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  gap: 20px;
+}
+
+.link {
+  background-color: #fff;
+  border-radius: 15px;
+  width: 130px;
+  padding: 8px;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: -1px;
+  font-size: 20px;
+  color:#012a50;
+  text-decoration: none;
+}
