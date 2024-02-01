@@ -1,38 +1,34 @@
 .header {
   background-color: #012a50;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 100%;
   color: white;
 }
 
 .imagens {
-  width: 48vw;
-display: flex;
-padding: 20px;
+  padding: 20px 0 0 20px;
 }
 
 .logoJP {
-  width: 200px;
+  height: 47px;
 }
 
 .logoFit {
-  width: 80px;
+  height: 47px;
 }
 
 .menu {
   display: flex;
   gap: 20px;
   list-style-type: none;
-  width: 48vw;
   justify-content: flex-end;
   padding: 10px;
   margin-right: 20px;
   font-size: 20px;
 }
 
-
 .linksMenu {
-    color: #fff;
-    text-decoration: none;
+  color: #fff;
+  text-decoration: none;
 }

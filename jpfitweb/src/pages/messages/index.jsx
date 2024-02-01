@@ -3,7 +3,7 @@
 import { Link } from "react-router-dom";
 import Header from "../../components/header";
 import style from './style.module.css';
-import logo from '../../imagens/Logo.png';
+import logo from '../../assets/Logo.png';
 
 export default function Messages() {
     return (
