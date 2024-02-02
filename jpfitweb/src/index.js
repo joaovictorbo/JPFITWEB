@@ -13,6 +13,7 @@ import Alerts from "./pages/alerts/index";
 import Security from "./pages/security/index";
 import UserData from "./pages/userData/index";
 
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -45,7 +46,7 @@ const router = createBrowserRouter([
   {
     path: "/user-data",
     element: <UserData/>,
-  },
+  }
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

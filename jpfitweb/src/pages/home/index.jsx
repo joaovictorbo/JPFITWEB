@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div className={style.home}>
       <Header />
-      <section className={style.content}>
+      <section className={style.container}>
         <div className={style.LogoCenter}>
           <img src={logoJP} className={style.logoJP} alt="" />
           <img src={logoFit} className={style.logoFit} alt="" />

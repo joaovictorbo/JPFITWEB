@@ -7,15 +7,24 @@
 }
 
 .imagens {
-  padding: 20px 0 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20px;
 }
 
 .logoJP {
-  height: 47px;
+  height: 30px;
 }
 
 .logoFit {
-  height: 47px;
+  height: 30px;
+}
+
+.imgMenu {
+  display: none;
+  cursor: pointer;
+  width: 30px;
 }
 
 .menu {
@@ -25,10 +34,71 @@
   justify-content: flex-end;
   padding: 10px;
   margin-right: 20px;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .linksMenu {
   color: #fff;
   text-decoration: none;
+}
+
+.sidebar {
+  display: none;
+  position: absolute;
+  top: 82px;
+  right: 0;
+}
+.menusidebar {
+  background-color: #012a50;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 32px;
+  
+}
+
+.linkssidebar {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  width: 130px;
+  text-decoration: none;
+  color: #fff;
+  padding: 10px;
+}
+
+/*table*/
+@media (max-width: 1024px) {
+  .sidebar {
+    display: none;
+  }
+}
+
+/*mobile*/
+@media (max-width: 767px) {
+  .menu {
+    flex-direction: row-reverse;
+  }
+  .imgMenu {
+    display: block;
+    width: 30px;
+    padding: 0;
+  }
+
+  .linksMenu {
+    display: none;
+  }
+
+  
+
+  .logoJP {
+    height: 25px;
+  }
+
+  .logoFit {
+    height: 25px;
+  }
+
+  
 }
