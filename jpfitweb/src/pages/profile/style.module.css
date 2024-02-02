@@ -1,64 +1,99 @@
 .profilePage {
-    background-image: url("../../assets/4.png");
-    height: 100vh;
-    background-size: cover;
+  background-image: url("../../assets/4.png");
+  height: 100vh;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 .content.content {
-    display: flex;
+  display: flex;
 }
 
-.profile{
-    width: 50vw;
-    height: calc(100vh - 87px);
-   
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
+.profile {
+  width: 50vw;
+  height: calc(100vh - 87px);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }
 
 .profile img {
-    width: 200px;
-    height: 200px;
-    border-radius: 100%;
-  
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
 }
 
 .profile > h1 {
-    font-size: 40px;
-    margin: 5px 0 40px;
+  font-size: 30px;
+  margin: 5px 0 40px;
+  color: #fff;
 }
 
 .links {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .link {
-    background-color: #fff;
-    border-radius: 15px;
-    width: 230px;
-    padding: 8px;
-    text-align: center;
-    font-weight: 400;
-    letter-spacing: -1px;
-    font-size: 20px;
-    color: rgb(103, 102, 102);
-    text-decoration: none;
+  background-color: #fff;
+  border-radius: 15px;
+  width: 230px;
+  padding: 8px;
+  text-align: center;
+  font-weight: 400;
+  letter-spacing: -1px;
+  font-size: 20px;
+  color: rgb(103, 102, 102);
+  text-decoration: none;
 }
 
-
-
-.logo{
-    width: 50vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.logo {
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .logoFit {
-    width: 400px;
+  width: 300px;
+}
+@media (max-width: 1024px) {
+  .logo {
+    display: none;
+  }
+
+  .profile {
+    width: 100vw;
+  }
+
+  .link {
+    width: 200px;
+    font-size: 16px;
+  }
 }
 
+@media (max-width: 767px) {
+  .logo {
+    display: none;
+  }
+
+  .profile {
+    width: 100vw;
+  }
+
+  .profile img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .profile > h1 {
+    font-size: 30px;
+  }
+
+  .link {
+    width: 200px;
+    font-size: 16px;
+  }
+}
