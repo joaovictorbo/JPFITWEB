@@ -7,18 +7,20 @@ export default function Security() {
   return (
     <div className={style.profilePage}>
       <Header />
-      <section className={style.content}>
-        <img src={logoFit} className={style.logo} alt="" />
+      <section className={style.container}>
+        <div className={style.content}>
+          <img src={logoFit} className={style.logo} alt="" />
 
-        <div className={style.password}>
-          <Input type="password" placeholder="Senha Atual" />
-          <Input type="password" placeholder="Nova Senha" />
-          <Input type="password" placeholder="Confirme sua senha" />
+          <div className={style.password}>
+            <Input type="password" placeholder="Senha Atual" />
+            <Input type="password" placeholder="Nova Senha" />
+            <Input type="password" placeholder="Confirme sua senha" />
+          </div>
+
+          <Link className={style.link} to="/profile">
+            Salvar
+          </Link>
         </div>
-
-        <Link className={style.link} to="/profile">
-          Salvar
-        </Link>
       </section>
     </div>
   );
