@@ -14,7 +14,6 @@
 }
 
 
-
 .criarTreinoLink {
     position: absolute;
     right: 7vw;
@@ -22,7 +21,7 @@
     background-color: #012a50;
     border-radius: 80px;
     width: 130px;
-    padding: 5px;
+    padding: 15px 20px;
     text-align: center;
     font-weight: 700;
     font-size: 20px;
