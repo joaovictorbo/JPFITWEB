@@ -1,4 +1,3 @@
-/* style.module.css */
 
 .nada {
     display: grid;
@@ -39,4 +38,51 @@
     margin: 5px;
 }
 
-/* Restante do seu CSS... */
+.buttonVermais {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    border-radius: 12px;
+    padding: 4px 10px;
+    background-color: #012a50;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    
+}
+
+.profile{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* Deixa a foto do usuário redonda */
+    margin-right: 20px;
+}
+
+.janela {
+    position: relative;
+    display: flex;
+    align-items: center;
+    max-width: 600px; /* Ajuste conforme necessário */
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+p {
+    margin: 15px 0 15px 0;
+    color: #1f1e1e;
+    font-size: 12px;
+    word-wrap: break-word;
+    text-align: justify;
+}
+
+h1 {
+    font-size: 20px;
+    color: #012a50;
+}
+
+.informacoesUsuario {
+    text-align: left;
+}
