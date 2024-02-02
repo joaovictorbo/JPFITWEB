@@ -30,7 +30,7 @@ export default function Register() {
 
           <p className={style.login}>
             Já possui uma conta?{" "}
-            <Link className={style.loginLink} to="/login">
+            <Link className={style.loginLink} to="/">
               Entrar
             </Link>
           </p>
