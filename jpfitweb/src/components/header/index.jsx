@@ -13,15 +13,7 @@ export default function Header() {
     document.getElementById("sidebar").style.display = "none";
   }
 
-  window.onclick = function (event) {
-    var sidebar = document.getElementById("sidebar");
-    if (
-      event.target !== sidebar &&
-      event.target !== document.getElementById("imgMenu")
-    ) {
-      closeSidebar();
-    }
-  };
+
 
   function sidebar() {
     var sidebar = document.getElementById("sidebar");

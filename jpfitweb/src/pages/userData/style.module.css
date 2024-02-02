@@ -1,12 +1,14 @@
-.userData{
+.userData {
   background-image: url("../../assets/3.png");
-    height: 100vh;
-    background-size: cover;
+  height: 100vh;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
 .content {
   display: flex;
+  align-items: center;
+  justify-content: center;
   height: calc(100vh - 87px);
 }
 
@@ -24,11 +26,9 @@
   margin: 0;
   color: #ffffff;
   letter-spacing: -1px;
-
 }
 
 .form {
- 
   width: 400px;
   display: flex;
   flex-direction: column;
@@ -41,15 +41,10 @@
 }
 
 .tel input {
-  width: 250px;
+  width: 100%;
 }
 .tel input:nth-last-of-type(2) {
-  width: 50px;
-  
-}
-
-.contetForm {
-  width: 50vw;
+  width: 70px;
 }
 
 .editarLink {
@@ -60,7 +55,7 @@
   text-align: center;
   font-weight: 700;
   letter-spacing: -1px;
-  font-size: 20px;
+  font-size: 18px;
   color: #012a50;
   text-decoration: none;
 }
@@ -75,7 +70,6 @@
   color: #ffffff;
 }
 
-
 .logo {
   width: 50vw;
   display: flex;
@@ -83,5 +77,28 @@
   align-items: center;
 }
 .logoFit {
-  width: 400px;
+  width: 300px;
+}
+
+@media (max-width: 1024px) {
+  .logo {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .logo {
+    display: none;
+  }
+
+  .contentForm {
+    width: 300px;
+  }
+  .contentForm > h1 {
+    font-size: 30px;
+  }
+
+  .form {
+    width: 300px;
+  }
 }
