@@ -1,0 +1,103 @@
+.container{
+    height: calc(100vh - 87px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.logoFit {
+  width: 250px;
+}
+
+.container h1 {
+  color: #fff;
+  background-color: #012a50;
+}
+
+.logo{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    align-items: center;
+}
+
+.logoJP{
+    width: 200px;
+}
+
+.container > h1 {
+    width: 180px; 
+    border-radius: 10px;
+    text-align: center; 
+    
+}
+
+
+.alunosList {
+  width: 40vw;
+  background-color: rgb(241, 240, 240);
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px 20px;
+}
+
+.aluno {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.aluno img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.aluno h2 {
+  width: 100%;
+  min-width: 108px;
+  color: #012a50;
+  font-size: 16px;
+ 
+}
+
+.aluno button {
+    border: 0;
+    background-color: #012a50;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+
+@media (max-width: 767px) {
+
+   
+    .logoFit{
+        width: 150px;
+    }
+    .logoJP{
+        width: 150px;
+    }
+    .container > h1 {
+        font-size: 16px;
+        
+    }
+
+    .aluno img {
+        width: 25px;
+        height: 25px;
+        
+      }
+    .aluno h2 {
+        
+        font-size: 10px;
+       
+      }
+      .aluno button {
+        font-size: 10px;
+    }
+}

@@ -12,7 +12,7 @@ import Messages from "./pages/messages/index";
 import Alerts from "./pages/alerts/index";
 import Security from "./pages/security/index";
 import UserData from "./pages/userData/index";
-
+import Alunos from "./pages/alunos";
 
 const router = createBrowserRouter([
   {
@@ -45,8 +45,12 @@ const router = createBrowserRouter([
   },
   {
     path: "/user-data",
-    element: <UserData/>,
-  }
+    element: <UserData />,
+  },
+  {
+    path: "/alunos",
+    element: <Alunos />,
+  },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
