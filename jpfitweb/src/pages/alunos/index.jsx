@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import Header from "../../components/header";
 import style from "./styles.module.css";
 import fotoPerfil from "../../assets/fotoPerfilExemplo.png";
@@ -31,23 +30,15 @@ export default function Alunos() {
         </div>
         <h1>Meus Alunos</h1>
 
-       
-          
-            
-            <div className={style.alunosList}>
-              {alunos.map((aluno, index) => (
-                <div className={style.aluno} key={index}>
-                  <img src={fotoPerfil} alt="" />
-                  <h2>{aluno.nome}</h2>
-                  <button>Visualizar</button>
-                  
-                </div>
-              ))}
+        <div className={style.alunosList}>
+          {alunos.map((aluno, index) => (
+            <div className={style.aluno} key={index}>
+              <img src={fotoPerfil} alt="" />
+              <h2>{aluno.nome}</h2>
+              <button>Visualizar</button>
             </div>
-            
-         
-       
-        
+          ))}
+        </div>
       </section>
     </div>
   );

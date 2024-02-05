@@ -65,7 +65,7 @@ export default function Header() {
         </li>
         <li>
           {" "}
-          <Link className={styles.linksMenu}>Meus Treinos</Link>
+          <Link className={styles.linksMenu} to="/meus-treinos">Meus Treinos</Link>
         </li>
         <li>
           {" "}
@@ -86,7 +86,7 @@ export default function Header() {
           <Link className={styles.linkssidebar} to={"/alerts"}>
             Avisos
           </Link>
-          <Link className={styles.linkssidebar}>Meus Treinos</Link>
+          <Link className={styles.linkssidebar}  to="/meus-treinos">Meus Treinos</Link>
           <Link className={styles.linkssidebar} to={"/profile"}>
             Perfil
           </Link>

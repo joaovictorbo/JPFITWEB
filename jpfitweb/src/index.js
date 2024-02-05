@@ -14,6 +14,7 @@ import Security from "./pages/security/index";
 import UserData from "./pages/userData/index";
 import Alunos from "./pages/alunos";
 import Visitante from "./pages/visitante";
+import MeusTreinos from "./pages/meusTreinos";
 
 const router = createBrowserRouter([
   {
@@ -55,6 +56,10 @@ const router = createBrowserRouter([
   {
     path: "/visitante",
     element: <Visitante />,
+  },
+  {
+    path: "/meus-treinos",
+    element: <MeusTreinos/>
   }
 ]);
 
