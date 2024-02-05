@@ -4,9 +4,12 @@ import Logo from "../../assets/logoFit.png";
 import Input from "../../components/input/index"
 import axios from "axios"
 import api from "../../components/api/api"
+import React from "react";
 
 
 export default function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   async function handleSignIn(data){
     const dados = await loginUser (data.username, data.password) 
   }
@@ -34,11 +37,10 @@ export default function Login() {
         <img  className={style.image} src={Logo}/>
 
         <div className={style.form}>
-          <Input type="text" placeholder="Email ou CPF" />
-          <Input type="password" placeholder="Senha" />
-          
+            <Input type="text" placeholder="Email ou CPF" onChange={(e) => setEmail(e.target.value)} />
+            <Input type="password" placeholder="Senha" onChange={(e) => setPassword(e.target.value)} />
         </div>
-
+        {"onClick={() => loginUser(email, password)"}
         <Link className={style.loginButton} to="./home">Login</Link>
         <p className={style.cadastrar}>Não possui uma conta?  <Link className={style.cadastrarLink} to="/register">Cadastrar</Link></p>
       </div>
