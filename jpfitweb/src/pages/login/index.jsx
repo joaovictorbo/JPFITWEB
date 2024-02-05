@@ -5,6 +5,7 @@ import Input from "../../components/input/index"
 import axios from "axios"
 import api from "../../components/api/api"
 import React from "react";
+import { useState } from "react";
 
 
 export default function Login() {
@@ -40,7 +41,7 @@ export default function Login() {
           <Input type="text" placeholder="Email ou CPF" onChange={(e) => setEmail(e.target.value)} />
           <Input type="password" placeholder="Senha" onChange={(e) => setPassword(e.target.value)} />
         </div>
-        {"onClick={() => handleSingIn(email, password)"}
+        {/*onClick={() => handleSingIn(email, password)*/}
         <Link className={style.loginButton} to="./home">Login</Link>
         <p className={style.cadastrar}>Não possui uma conta?  <Link className={style.cadastrarLink} to="/register">Cadastrar</Link></p>
       </div>
