@@ -40,6 +40,7 @@ export default function Alunos() {
                   <img src={fotoPerfil} alt="" />
                   <h2>{aluno.nome}</h2>
                   <button>Visualizar</button>
+                  
                 </div>
               ))}
             </div>

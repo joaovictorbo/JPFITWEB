@@ -2,8 +2,32 @@ import { Link } from "react-router-dom";
 import style from "./style.module.css";
 import Logo from "../../assets/logoFit.png";
 import Input from "../../components/input/index"
+import axios from "axios"
+import api from "../../components/api/api"
+
 
 export default function Login() {
+  async function handleSignIn(data){
+    const dados = await loginUser (data.username, data.password) 
+  }
+  
+  const loginUser = async (username, password) => {
+    try {
+    const response = await api.post('/tokens', {
+      email: username, 
+      password: password
+    })
+    .then (async function (response) {
+      return response.data
+    })
+    .catch (function (error){
+      window.alert('Usuário ou senha incorretos.')
+    })
+  } catch(error){
+    throw error;
+  }
+
+  }
   return (
     <div className={style.login}>
       <div className={style.loginForm}>
