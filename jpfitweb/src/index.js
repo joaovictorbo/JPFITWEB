@@ -13,6 +13,7 @@ import Alerts from "./pages/alerts/index";
 import Security from "./pages/security/index";
 import UserData from "./pages/userData/index";
 import Alunos from "./pages/alunos";
+import Visitante from "./pages/visitante";
 
 const router = createBrowserRouter([
   {
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
     path: "/alunos",
     element: <Alunos />,
   },
+  {
+    path: "/visitante",
+    element: <Visitante />,
+  }
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
