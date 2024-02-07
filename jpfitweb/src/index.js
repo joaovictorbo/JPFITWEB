@@ -15,6 +15,7 @@ import UserData from "./pages/userData/index";
 import Alunos from "./pages/alunos";
 import Visitante from "./pages/visitante";
 import MeusTreinos from "./pages/meusTreinos";
+import VerMaisMensagens from "./pages/messages/verMais";
 
 const router = createBrowserRouter([
   {
@@ -59,7 +60,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/meus-treinos",
-    element: <MeusTreinos/>
+    element: <MeusTreinos/>,
+  },
+  {
+    path: "/verMais",
+    element: <VerMaisMensagens/>,
   }
 ]);
 

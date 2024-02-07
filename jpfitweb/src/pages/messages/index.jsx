@@ -22,7 +22,7 @@ export default function Messages() {
                 <div className={style.informacoesUsuario}>
                     <h1>Aluno Sobrenome</h1>
                     <p>einwnfuwnufwbfeweb fkwebubkebfbeffffffffff  ffffffffffffffff ffffffffffffffffffff ffffffff f f fff fffff ffffff fffff fffff fff ffff fffff ffffff ffffffffff fgyggygym mmmmmm mmmmmmmm mmmmmmmm mmmmmmmmm mmmmmmm m mmm mmmmm mmmmmm mmmmmmmmm mm mmmmmmmmmm m m m mmmmm mmmmmm mmmmmmm mmmmmmmm mmmmmm mmmmmmm mmmmm mmmmm mmmmmm mmmm mmmmm mmmmmmm mmmm mmmmm mm mmmm mmmm mmmmm mmmmmmmmmm mmmmmmmmmm mmmmmmmmmmmmmmmmm mmmmmmmmm</p>
-                    <button className={style.buttonVermais}>Ver mais</button>
+                    <Link className={style.buttonVermais}  to="/verMais" >Ver mais</Link>
                 </div>
             </div>
 
