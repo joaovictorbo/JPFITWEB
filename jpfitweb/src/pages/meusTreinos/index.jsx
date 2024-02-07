@@ -30,7 +30,7 @@ export default function MeusTreinos() {
     <div className={style.meusTreinos}>
       <Header />
       <section className={style.container}>
-        <img src={logo} className={style.img} />
+        <img src={logo} className={style.img} alt="" />
 
         <div className={style.aluno}>
           <img src={fotoPerfil} alt="" />
