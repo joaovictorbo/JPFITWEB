@@ -27,13 +27,7 @@ export default function UserData() {
           <Link className={style.editarLink} to="/profile">
             Editar
           </Link>
-
-          <p className={style.login}>
-            Já possui uma conta?{" "}
-            <Link className={style.loginLink} to="/">
-              Entrar
-            </Link>
-          </p>
+          
         </div>
 
         <div className={style.logo}>
