@@ -17,6 +17,7 @@ import Visitante from "./pages/visitante";
 import MeusTreinos from "./pages/meusTreinos";
 import VerMaisMensagens from "./pages/messages/verMais";
 import Visualizar from "./pages/visualizar";
+import CriarTreinos from "./pages/criarTreinos/index";
 
 const router = createBrowserRouter([
   {
@@ -70,6 +71,10 @@ const router = createBrowserRouter([
   {
     path: "/aluno-visualizar",
     element: <Visualizar/>,
+  },
+  {
+    path: "/criar-treino",
+    element: <CriarTreinos/>,
   },
 
 ]);

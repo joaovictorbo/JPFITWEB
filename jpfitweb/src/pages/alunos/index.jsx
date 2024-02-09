@@ -108,7 +108,7 @@ export default function Alunos() {
 
               <img className={style.icon} src={olho} alt="" />
 
-              <button>Criar Treino</button>
+              <button><Link to="/criar-treino" className={style.link}>Criar Treino </Link></button>
 
               <img className={style.icon} src={plus} alt="" />
             </div>
