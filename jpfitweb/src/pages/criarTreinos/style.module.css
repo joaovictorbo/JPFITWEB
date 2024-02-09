@@ -1,5 +1,5 @@
-.register {
-  background-image: url("../../assets/4.png");
+.home {
+  background-image: url("../../assets/transparente.png");
   height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
@@ -7,71 +7,50 @@
 
 .content {
   display: flex;
-  height: calc(100vh - 87px);
-  align-items: center;
-  justify-content: center;
 }
 
-.contentForm {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+.profile {
   width: 50vw;
-  gap: 20px;
+  height: calc(100vh - 87px);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }
 
-.contentForm > h1 {
-  font-size: 30px;
-  margin: 0;
-  color: #ffffff;
-  letter-spacing: -1px;
-}
-
-.form {
-  width: 400px;
+.links {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.tel {
-  display: flex;
-  gap: 20px;
-}
-
-.tel input {
-  width: 100%;
-}
-.tel input:nth-last-of-type(2) {
-  width: 50px;
-}
-
-.contetForm {
-  width: 70px;
-}
-
-.editarLink {
-  background-color: #fff;
+.link {
+  background-color:#012a50;
   border-radius: 15px;
-  width: 130px;
+  width: 250px;
   padding: 8px;
   text-align: center;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: -1px;
-  font-size: 18px;
-  color: #012a50;
+  font-size: 20px;
+  color: white;
   text-decoration: none;
 }
 
-.login {
-  font-size: 16px;
-  margin: 0;
-  color: #ffffff;
-}
-
-.loginLink {
-  color: #ffffff;
+.add {
+  background-color:rgb(209, 208, 208);
+  border-radius: 15px;
+  width: 200px;
+  padding: 8px;
+  align-self: center;
+  text-align: center;
+  font-weight: 400;
+  letter-spacing: -1px;
+  font-size: 20px;
+  color: #012a50;
+  text-decoration: none;
 }
 
 .logo {
@@ -80,25 +59,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .logoFit {
   width: 300px;
-}
-
-@media (max-width: 1024px) {
-  .logo {
-    display: none;
-  }
-}
-
-@media (max-width: 767px) {
-  .contentForm {
-    width: 300px;
-  }
-  .contentForm > h1 {
-    font-size: 30px;
-  }
-
-  .form {
-    width: 300px;
-  }
 }

@@ -55,8 +55,21 @@ export default function CriarTreinos() {
 
 ];
   return (
-    <div>
+    <div className={style.home}>
       <Header />
+      <section className={style.content}>
+        <div className={style.profile}>
+          <div className={style.links}>
+            <Link className={style.link} to="">Criar Treino</Link>
+            <Link className={style.add} to="">+</Link>
+          </div>
+        </div>
+
+        <div className={style.logo}>
+          <img className={style.logoFit} src={logoFit} alt="" />
+        </div>
+      </section>
+
     </div>
   );
 }
