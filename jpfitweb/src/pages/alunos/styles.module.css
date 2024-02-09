@@ -27,7 +27,8 @@
   font-size: 20px;
 }
 
-.menus button:hover {
+.menus button:hover,
+.linkMenu:hover {
   cursor: pointer;
   background-color: #012a50;
   color: white;
@@ -51,16 +52,22 @@
   min-width: 250px;
   display: flex;
   flex-direction: column;
+  align-content: space-between;
+
   gap: 20px;
   padding: 10px 20px;
   min-height: 275px;
   overflow-y: auto;
 }
 
+
+
 .aluno {
   display: flex;
   gap: 20px;
   align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .aluno img {
@@ -90,9 +97,16 @@
   display: none;
 }
 
+.linkMenu {
+  color: #012a50;
+  text-decoration: none;
+  border-radius: 20px;
+}
+
 .link {
   color: #fff;
   text-decoration: none;
+  width: 100%;
 }
 
 @media (max-width: 767px) {
@@ -104,6 +118,10 @@
   }
   .container > h1 {
     font-size: 16px;
+  }
+
+  .alunosList {
+    width: 70%;
   }
 
   .menus button {
@@ -128,5 +146,9 @@
   }
   .icon {
     display: inline;
+  }
+
+  .linkMenu button {
+    height: 100%;
   }
 }

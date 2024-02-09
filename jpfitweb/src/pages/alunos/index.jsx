@@ -5,7 +5,6 @@ import logoFit from "../../assets/logoFitNome.png";
 import logoJP from "../../assets/logoFitCor.png";
 import { useState } from "react";
 
-
 import olho from "../../assets/responsive/olho.png";
 import plus from "../../assets/responsive/plus.png";
 import { Link } from "react-router-dom";
@@ -96,7 +95,9 @@ export default function Alunos() {
           <button onClick={meusAlunos} id="meusAlunos">
             Meus Alunos
           </button>
-          <button id="cadastrar">Cadastrar</button>
+          <Link to="/register-aluno" className={style.linkMenu}>
+            <button id="cadastrar">Cadastrar</button>
+          </Link>
         </div>
 
         <div className={style.alunosList}>
@@ -104,13 +105,25 @@ export default function Alunos() {
             <div className={style.aluno} key={index}>
               <img src={fotoPerfil} alt="" />
               <h2>{aluno.nome}</h2>
-              <button><Link to="/aluno-visualizar" className={style.link}>Visualizar</Link></button>
+              <button>
+                <Link to="/aluno-visualizar" className={style.link}>
+                  Visualizar
+                </Link>
+              </button>
 
-              <img className={style.icon} src={olho} alt="" />
+              <Link to="/aluno-visualizar">
+                <img className={style.icon} src={olho} alt="" />
+              </Link>
 
-              <button><Link to="/criar-treino" className={style.link}>Criar Treino </Link></button>
+              <button>
+                <Link to="/criar-treino" className={style.link}>
+                  Criar Treino{" "}
+                </Link>
+              </button>
 
-              <img className={style.icon} src={plus} alt="" />
+              <Link to="/criar-treino">
+                <img className={style.icon} src={plus} alt="" />
+              </Link>
             </div>
           ))}
         </div>
