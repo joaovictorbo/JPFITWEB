@@ -19,6 +19,7 @@ import VerMaisMensagens from "./pages/messages/verMais";
 import Visualizar from "./pages/visualizar";
 import CriarTreinos from "./pages/criarTreinos/index";
 import RegisterAluno from "./pages/registerAluno";
+import CriarExercicios from "./pages/criarExercicios";
 
 const router = createBrowserRouter([
   {
@@ -46,7 +47,7 @@ const router = createBrowserRouter([
     element: <Alerts />,
   },
   {
-    path: "/password-end-security",
+    path: "/password-and-security",
     element: <Security />,
   },
   {
@@ -81,6 +82,12 @@ const router = createBrowserRouter([
     path: "/register-aluno",
     element: <RegisterAluno />,
   },
+  {
+    path: "/criar-exercicios",
+    element: <CriarExercicios />,
+  },
+  
+  
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
