@@ -90,6 +90,11 @@
   display: none;
 }
 
+.link {
+  color: #fff;
+  text-decoration: none;
+}
+
 @media (max-width: 767px) {
   .logoFit {
     width: 200px;

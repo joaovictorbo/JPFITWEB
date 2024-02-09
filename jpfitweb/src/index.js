@@ -16,6 +16,7 @@ import Alunos from "./pages/alunos";
 import Visitante from "./pages/visitante";
 import MeusTreinos from "./pages/meusTreinos";
 import VerMaisMensagens from "./pages/messages/verMais";
+import Visualizar from "./pages/visualizar";
 
 const router = createBrowserRouter([
   {
@@ -65,7 +66,12 @@ const router = createBrowserRouter([
   {
     path: "/verMais",
     element: <VerMaisMensagens/>,
-  }
+  },
+  {
+    path: "/aluno-visualizar",
+    element: <Visualizar/>,
+  },
+
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
