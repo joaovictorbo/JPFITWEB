@@ -13,8 +13,6 @@ export default function Header() {
     document.getElementById("sidebar").style.display = "none";
   }
 
-
-
   function sidebar() {
     var sidebar = document.getElementById("sidebar");
     if (sidebar.style.display === "none") {
@@ -54,7 +52,9 @@ export default function Header() {
         </li>
         <li>
           {" "}
-          <Link className={styles.linksMenu} to="/alunos">Alunos</Link>{" "}
+          <Link className={styles.linksMenu} to="/alunos">
+            Alunos
+          </Link>{" "}
         </li>
         <li>
           {" "}
@@ -65,7 +65,9 @@ export default function Header() {
         </li>
         <li>
           {" "}
-          <Link className={styles.linksMenu} to="/meus-treinos">Meus Treinos</Link>
+          <Link className={styles.linksMenu} to="/meus-treinos">
+            Meus Treinos
+          </Link>
         </li>
         <li>
           {" "}
@@ -81,13 +83,18 @@ export default function Header() {
           <Link className={styles.linkssidebar} to={"/messages"}>
             Mensagens
           </Link>
-          <Link className={styles.linkssidebar} to="/alunos"> Alunos</Link>
+          <Link className={styles.linkssidebar} to="/alunos">
+            {" "}
+            Alunos
+          </Link>
 
           <Link className={styles.linkssidebar} to={"/alerts"}>
             Avisos
           </Link>
-          <Link className={styles.linkssidebar}  to="/meus-treinos">Meus Treinos</Link>
-          <Link className={styles.linkssidebar} to={"/profile"}>
+          <Link className={styles.linkssidebar} to="/meus-treinos">
+            Meus Treinos
+          </Link>
+          <Link className={styles.linkssidebar} to="/profile">
             Perfil
           </Link>
         </div>

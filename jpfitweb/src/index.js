@@ -18,6 +18,7 @@ import MeusTreinos from "./pages/meusTreinos";
 import VerMaisMensagens from "./pages/messages/verMais";
 import Visualizar from "./pages/visualizar";
 import CriarTreinos from "./pages/criarTreinos/index";
+import RegisterAluno from "./pages/registerAluno";
 
 const router = createBrowserRouter([
   {
@@ -62,21 +63,24 @@ const router = createBrowserRouter([
   },
   {
     path: "/meus-treinos",
-    element: <MeusTreinos/>,
+    element: <MeusTreinos />,
   },
   {
     path: "/verMais",
-    element: <VerMaisMensagens/>,
+    element: <VerMaisMensagens />,
   },
   {
     path: "/aluno-visualizar",
-    element: <Visualizar/>,
+    element: <Visualizar />,
   },
   {
     path: "/criar-treino",
-    element: <CriarTreinos/>,
+    element: <CriarTreinos />,
   },
-
+  {
+    path: "/register-aluno",
+    element: <RegisterAluno />,
+  },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
