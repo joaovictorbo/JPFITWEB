@@ -5,6 +5,10 @@ import logoFit from "../../assets/logoFitNome.png";
 import logoJP from "../../assets/logoFitCor.png";
 import { useState } from "react";
 
+import olho from "../../assets/responsive/olho.png";
+import plus from "../../assets/responsive/plus.png";
+import { Link } from "react-router-dom";
+
 export default function Alunos() {
   const alunos = [
     {
@@ -100,7 +104,12 @@ export default function Alunos() {
               <img src={fotoPerfil} alt="" />
               <h2>{aluno.nome}</h2>
               <button>Visualizar</button>
+
+              <img className={style.icon} src={olho} alt="" />
+
               <button>Criar Treino</button>
+
+              <img className={style.icon} src={plus} alt="" />
             </div>
           ))}
         </div>
