@@ -57,8 +57,30 @@
     background-color: #012a50;
     color: #ffffff;
     border: none;
+    cursor: pointer;    
+}
+
+.menus {
+    display: flex;
+    gap: 15px;
+    margin: 15px;
+}
+  
+.menus button {
+    color: #012a50;
+    background-color: #fff;
+    width: 180px;
+    border-radius: 20px;
+    border: 3px solid #012a50;
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+}
+  
+.menus button:hover {
     cursor: pointer;
-    
+    background-color: #012a50;
+    color: white;
 }
 
 .profile{
@@ -80,17 +102,35 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.janelaVerMais{
+.janelaVerMais {
     background-color: white;
     display: flex;
+    flex-direction: column;
     align-items: center;
     max-width: 600px; /* Ajuste conforme necessário */
     margin: 20px auto;
-    padding: 20px;
+    padding-top: 10px; /* Padding apenas na parte superior */
+    padding-right: 20px; /* Padding na parte direita */
+    padding-bottom: 20px; /* Padding na parte inferior */
+    padding-left: 20px; /* Padding na parte esquerda */
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-height: 500px; /* Ajuste conforme necessário */
+    overflow-y: auto;
 }
+
+.buttonResponder {
+    background-color: rgb(228, 225, 225);
+    color: #012a50;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px; /* Adiciona espaço entre o texto e o botão */
+}
+
+
 
 p {
     margin: 15px 0 15px 0;
@@ -107,4 +147,6 @@ h1 {
 
 .informacoesUsuario {
     text-align: left;
+    display: flex;
+    flex-direction: column;
 }

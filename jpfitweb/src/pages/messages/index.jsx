@@ -11,7 +11,7 @@ export default function Messages() {
         <div className={style.body}>
             <Header />
             <img className={style.logo} src={logo} alt="Logo" />
-            <div className={style.botoesCima}>
+            <div className={style.menus}>
                 <button className={style.buttonArredondado}>Enviado</button>
                 <button className={style.buttonArredondado}>Todos</button>
                 <button className={style.buttonArredondado}>Resposta</button>
