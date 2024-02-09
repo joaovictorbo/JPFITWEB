@@ -1,59 +1,18 @@
 import style from "./style.module.css";
 import { Link } from "react-router-dom";
+import { useState } from "react"; // Add this import statement
+
 import Header from "../../components/header";
 import logoFit from "../../assets/logoFit.png";
 import Input from "../../components/input/index.jsx";
 
 export default function CriarTreinos() {
-  const EXERCISES = [
+  const [links, setLinks] = useState([]); // Add state for links
 
-    {
-        name:"Bicicleta", 
-        reps: 10, 
-        sets: 3, 
-        description:"rosca direta",
-        musculo_alvo:"biceps",
-        url_tutorial:"https://www.youtube.com/watch?v=ZpvqYXj-gIQ",
-        dicas:"aproxime o cotovelo"
-     },
-     {
-        name:"Bicicleta",
-        reps: 10, 
-        sets: 3, 
-        description:"rosca direta",
-        musculo_alvo:"biceps",
-        url_tutorial:"https://www.youtube.com/watch?v=ZpvqYXj-gIQ",
-        dicas:"aproxime o cotovelo"
-     },
-     {
-        name:"Bicicleta",
-        reps: 10, 
-        sets: 3, 
-        description:"rosca direta",
-        musculo_alvo:"biceps",
-        url_tutorial:"https://www.youtube.com/watch?v=ZpvqYXj-gIQ",
-        dicas:"aproxime o cotovelo"
-     },
-     {
-        name:"Bicicleta",
-        reps: 10, 
-        sets: 3, 
-        description:"rosca direta",
-        musculo_alvo:"biceps",
-        url_tutorial:"https://www.youtube.com/watch?v=ZpvqYXj-gIQ",
-        dicas:"aproxime o cotovelo"
-     },
-     {
-        name:"Bicicleta",
-        reps: 10, 
-        sets: 3, 
-        description:"rosca direta",
-        musculo_alvo:"biceps",
-        url_tutorial:"https://www.youtube.com/watch?v=ZpvqYXj-gIQ",
-        dicas:"aproxime o cotovelo"
-     }
+  const handleAddLink = () => {
+    setLinks([...links, ""]); // Add an empty string to the links array
+  };
 
-];
   return (
     <div className={style.home}>
       <Header />
@@ -61,7 +20,10 @@ export default function CriarTreinos() {
         <div className={style.profile}>
           <div className={style.links}>
             <Link className={style.link} to="">Criar Treino</Link>
-            <Link className={style.add} to="">+</Link>
+            {links.map((link, index) => (
+              <Link key={index} className={style.link} to="">Criar Treino</Link>
+            ))}
+            <button className={style.add} onClick={handleAddLink}>+</button>
           </div>
         </div>
 
@@ -69,7 +31,6 @@ export default function CriarTreinos() {
           <img className={style.logoFit} src={logoFit} alt="" />
         </div>
       </section>
-
     </div>
   );
 }
