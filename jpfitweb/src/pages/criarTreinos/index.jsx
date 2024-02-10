@@ -1,10 +1,8 @@
 import style from "./style.module.css";
 import { Link } from "react-router-dom";
 import { useState } from "react"; // Add this import statement
-
 import Header from "../../components/header";
-import logoFit from "../../assets/logoFit.png";
-import Input from "../../components/input/index.jsx";
+import logoFitCorreto from "../../assets/logoFitCorreto.png";
 
 export default function CriarTreinos() {
   const [links, setLinks] = useState([]); // Add state for links
@@ -28,7 +26,7 @@ export default function CriarTreinos() {
         </div>
 
         <div className={style.logo}>
-          <img className={style.logoFit} src={logoFit} alt="" />
+          <img className={style.logoFit} src={logoFitCorreto} alt="" />
         </div>
       </section>
     </div>
