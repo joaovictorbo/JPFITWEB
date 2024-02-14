@@ -15,11 +15,12 @@ import UserData from "./pages/userData/index";
 import Alunos from "./pages/alunos";
 import Visitante from "./pages/visitante";
 import MeusTreinos from "./pages/meusTreinos";
-import VerMaisMensagens from "./pages/messages/verMais";
+import VerMaisMensagens from "./pages/verMais";
 import Visualizar from "./pages/visualizar";
 import CriarTreinos from "./pages/criarTreinos/index";
 import RegisterAluno from "./pages/registerAluno";
 import CriarExercicios from "./pages/criarExercicios";
+import ResponderT from "./pages/responder/index";
 
 const router = createBrowserRouter([
   {
@@ -86,7 +87,10 @@ const router = createBrowserRouter([
     path: "/criar-exercicios",
     element: <CriarExercicios />,
   },
-  
+  {
+    path: "/responder",
+    element: <ResponderT />,
+  },
   
 ]);
 
