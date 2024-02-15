@@ -1,8 +1,8 @@
 import Header from "../../components/header";
 import style from "./styles.module.css";
 import fotoPerfil from "../../assets/fotoPerfilExemplo.png";
-import logoFit from "../../assets/logoFitNome.png";
-import logoJP from "../../assets/logoFitCor.png";
+import Logo from "../../assets/logoPequena.png";
+
 import { useState } from "react";
 
 import olho from "../../assets/responsive/olho.png";
@@ -85,8 +85,7 @@ export default function Alunos() {
       <Header />
       <section className={style.container} onLoad={selecao}>
         <div className={style.logo}>
-          <img src={logoFit} className={style.logoFit} alt="" />
-          <img src={logoJP} className={style.logoJP} alt="" />
+          <img src={Logo} className={style.logoNome} alt="" />
         </div>
         <div className={style.menus}>
           <button onClick={todosAlunos} id="todos">

@@ -7,9 +7,10 @@
   gap: 10px;
 }
 
-.logoFit {
-  width: 250px;
+.logoNome {
+  width: 300px;
 }
+
 .menus {
   display: flex;
   gap: 15px;
@@ -41,9 +42,6 @@
   align-items: center;
 }
 
-.logoJP {
-  width: 200px;
-}
 
 .alunosList {
   max-width: 560px;
@@ -110,12 +108,10 @@
 }
 
 @media (max-width: 767px) {
-  .logoFit {
+  .logoNome {
     width: 200px;
   }
-  .logoJP {
-    width: 200px;
-  }
+ 
   .container > h1 {
     font-size: 16px;
   }
@@ -130,7 +126,7 @@
     border: 3px solid #012a50;
     text-align: center;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .aluno img {
@@ -138,7 +134,7 @@
     height: 25px;
   }
   .aluno h2 {
-    font-size: 10px;
+    font-size: 12px;
   }
   .aluno button {
     font-size: 10px;
