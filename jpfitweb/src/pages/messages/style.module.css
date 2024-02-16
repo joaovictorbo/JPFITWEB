@@ -56,13 +56,15 @@
 }
 
 .buttonVermais {
-    
-  border-radius: 12px;
-  padding: 4px 20px;
-  background-color: #012a50;
-  color: #ffffff;
-  border: none;
-  cursor: pointer;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    border-radius: 12px;
+    padding: 4px 10px;
+    background-color: #012a50;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;    
 }
 
 .menus {
@@ -96,33 +98,33 @@
 }
 
 .janela {
-  position: relative;
-  display: flex;
-  align-items: center;
-  max-width: 600px; /* Ajuste conforme necessário */
-  margin: 20px auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    align-items: center;
+    max-width: 600px; /* Ajuste conforme necessário */
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .janelaVerMais {
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 600px; /* Ajuste conforme necessário */
-  margin: 20px auto;
-  padding-top: 10px; /* Padding apenas na parte superior */
-  padding-right: 20px; /* Padding na parte direita */
-  padding-bottom: 20px; /* Padding na parte inferior */
-  padding-left: 20px; /* Padding na parte esquerda */
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-height: 500px; /* Ajuste conforme necessário */
-  overflow-y: auto;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px; /* Ajuste conforme necessário */
+    margin: 20px auto;
+    padding-top: 10px; /* Padding apenas na parte superior */
+    padding-right: 20px; /* Padding na parte direita */
+    padding-bottom: 20px; /* Padding na parte inferior */
+    padding-left: 20px; /* Padding na parte esquerda */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-height: 500px; /* Ajuste conforme necessário */
+    overflow-y: auto;
 }
 
 .buttonResponder {
@@ -152,4 +154,33 @@ h1 {
   text-align: left;
   display: flex;
   flex-direction: column;
+}
+
+@media (max-width: 767px) {
+    .logo {
+        max-height: 100px;
+    }
+    
+    .menus button {
+      width: 120px;
+      border-radius: 20px;
+      border: 3px solid #012a50;
+      text-align: center;
+      font-weight: 700;
+      font-size: 15px;
+      padding: 9px;
+    }
+
+    .janela{
+        position: relative;
+        display: flex;
+        align-items: center;
+        max-width: 400px; /* Ajuste conforme necessário */
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
 }
