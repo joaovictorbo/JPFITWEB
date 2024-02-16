@@ -54,6 +54,26 @@
   cursor: pointer;
 }
 
+.avancarLink {
+  position: absolute;
+  right: 7vw;
+  bottom: 40px;
+  background-color: #012a50;
+  border-radius: 80px;
+  width: 130px;
+  padding: 15px 20px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+.criarTreinoLink:hover{
+  color: #012a50;
+  background-color: #fff;
+}
+
 .logo {
   width: 50vw;
   display: flex;

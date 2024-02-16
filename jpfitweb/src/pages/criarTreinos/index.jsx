@@ -28,6 +28,9 @@ export default function CriarTreinos() {
         <div className={style.logo}>
           <img className={style.logoFit} src={logoFitCorreto} alt="" />
         </div>
+
+        <Link className={style.avancarLink}>Avançar</Link>
+
       </section>
     </div>
   );
