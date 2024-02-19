@@ -8,13 +8,12 @@
 
 .content {
   display: flex;
+  flex-direction: column;
 }
 
 .profile {
-  width: 50vw;
-  height: calc(100vh - 87px);
   display: flex;
-  flex-direction: column;
+  flex-direction:column;
   justify-content: center;
   align-items: center;
   color: white;
@@ -55,12 +54,11 @@
 }
 
 .logo {
-  width: 50vw;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .logoFit {
-  width: 600px;
+  width: 500px;
 }
