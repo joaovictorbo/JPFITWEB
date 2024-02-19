@@ -11,8 +11,11 @@ import { useState } from "react";
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [isLoggedIn, setIsLoggedIn] = useState(true); // essa variavel precisa ser false
+
   async function handleSignIn(data) {
-    const dados = await loginUser(data.username, data.password)
+    const dados = await loginUser(data.username, data.password);
+    setIsLoggedIn(true); // Set isLoggedIn to true if login is successful
   }
 
   const loginUser = async (username, password) => {
@@ -22,16 +25,17 @@ export default function Login() {
         password: password
       })
         .then(async function (response) {
-          return response.data
+          return response.data;
         })
         .catch(function (error) {
-          window.alert('Usuário ou senha incorretos.')
-        })
+          window.alert('Usuário ou senha incorretos.');
+        });
+      return response;
     } catch (error) {
       throw error;
     }
-
   }
+
   return (
     <div className={style.login}>
       <div className={style.loginForm}>
@@ -41,8 +45,11 @@ export default function Login() {
           <Input type="text" placeholder="Email ou CPF" onChange={(e) => setEmail(e.target.value)} />
           <Input type="password" placeholder="Senha" onChange={(e) => setPassword(e.target.value)} />
         </div>
-        {/*onClick={() => handleSingIn(email, password)*/}
-        <Link className={style.loginButton} to="./home">Login</Link>
+        {isLoggedIn ? (
+          <Link className={style.loginButton} to="./home">Login</Link>
+        ) : (
+          <button className={style.loginButton} onClick={() => handleSignIn(email, password)}>Login</button>
+        )}
         <p className={style.cadastrar}>Não possui uma conta?  <Link className={style.cadastrarLink} to="/register">Cadastrar</Link></p>
       </div>
     </div>
