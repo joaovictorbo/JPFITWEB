@@ -47,7 +47,30 @@
   margin-bottom: 20px;
 }
 
+.botoes {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  width: 250px;
+}
+
 .add {
+  background-color:rgb(209, 208, 208);
+  border-radius: 15px;
+  width: 200px;
+  padding: 8px;
+  align-self: center;
+  text-align: center;
+  font-weight: 400;
+  letter-spacing: -1px;
+  font-size: 32px;
+  color: #012a50;
+  text-decoration: none;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.remove {
   background-color:rgb(209, 208, 208);
   border-radius: 15px;
   width: 200px;

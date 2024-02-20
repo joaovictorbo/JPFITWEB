@@ -29,6 +29,10 @@ export default function CriarTreinos() {
     setForm({ ...form, [e.target.name]: e.target.value }); // Update the form state with the Input value
   };
 
+  const handleRemoveExercicio = () => {
+    setLinks(links.slice(0, -1)); // Remove the last element from the links array
+  };
+
   return (
     <div className={style.home}>
       <Header />
@@ -97,7 +101,12 @@ export default function CriarTreinos() {
             </div>
           ))}
         </div>
-        <button className={style.add} onClick={handleAddExercicio}>+</button>
+        
+        <div className={style.botoes}>
+          <button className={style.add} onClick={handleAddExercicio}>+</button>
+          <button className={style.remove} onClick={handleRemoveExercicio}>-</button>
+        </div>
+        
       </section>
     </div>
     
