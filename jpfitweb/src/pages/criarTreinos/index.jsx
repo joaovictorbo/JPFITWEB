@@ -17,9 +17,9 @@ export default function CriarTreinos() {
       <section className={style.content}>
         <div className={style.profile}>
           <div className={style.links}>
-            <Link className={style.link} to="">Criar Treino</Link>
+            <Link className={style.link} to="/criar-exercicios">Criar Treino</Link>
             {links.map((link, index) => (
-              <Link key={index} className={style.link} to="">Criar Treino</Link>
+              <Link key={index} className={style.link} to="/criar-exercicios">Criar Treino</Link>
             ))}
             <button className={style.add} onClick={handleAddLink}>+</button>
           </div>
@@ -28,8 +28,6 @@ export default function CriarTreinos() {
         <div className={style.logo}>
           <img className={style.logoFit} src={logoFitCorreto} alt="" />
         </div>
-
-        <Link className={style.avancarLink}>Avançar</Link>
 
       </section>
     </div>
