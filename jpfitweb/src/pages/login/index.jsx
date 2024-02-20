@@ -39,7 +39,7 @@ export default function Login() {
   return (
     <div className={style.login}>
       <div className={style.loginForm}>
-        <img className={style.image} src={Logo} />
+        <img className={style.image} src={Logo} alt=""/>
 
         <div className={style.form}>
           <Input type="text" placeholder="Email ou CPF" onChange={(e) => setEmail(e.target.value)} />
