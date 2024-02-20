@@ -24,7 +24,7 @@ export default function Register() {
             <Input type="password" placeholder="Senha" />
           </section>
 
-          <Link className={style.editarLink} to="/profile">
+          <Link className={style.editarLink} to="/">
             Cadastrar
           </Link>
 
