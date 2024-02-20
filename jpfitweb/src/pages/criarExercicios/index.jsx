@@ -1,9 +1,8 @@
 import style from "./style.module.css";
-import { Link } from "react-router-dom";
 import { useState } from "react"; // Add this import statement
 import Header from "../../components/header";
 import logoFitCorreto from "../../assets/logoFitCorreto.png";
-import Input from "../../components/input/index.jsx";
+import Input2 from "../../components/input2/index.jsx";
 
 export default function CriarTreinos() {
   const [links, setLinks] = useState([]); // Add state for links
@@ -30,6 +29,10 @@ export default function CriarTreinos() {
     setForm({ ...form, [e.target.name]: e.target.value }); // Update the form state with the Input value
   };
 
+  const handleRemoveExercicio = () => {
+    setLinks(links.slice(0, -1)); // Remove the last element from the links array
+  };
+
   return (
     <div className={style.home}>
       <Header />
@@ -45,61 +48,65 @@ export default function CriarTreinos() {
           {links.map((link, index) => (
             <div key={index} className={style.password}>
               <form>
-                <Input
-                  className={style.password}
+                <Input2
                   type="text"
                   name="name"
                   value={form.name}
                   onChange={handleFormChange}
-                  placeholder="Name"
+                  placeholder="Nome"
                 />
-                <Input
+                <Input2
                   type="text"
-                  name="reps"
-                  value={form.reps}
+                  name="description"
+                  value={form.description}
                   onChange={handleFormChange}
-                  placeholder="Reps"
+                  placeholder="Descrição"
                 />
-                <Input
+                <Input2
                   type="number"
                   name="sets"
                   value={form.sets}
                   onChange={handleFormChange}
                   placeholder="Sets"
                 />
-                <Input
+                <Input2
                   type="text"
-                  name="description"
-                  value={form.description}
+                  name="reps"
+                  value={form.reps}
                   onChange={handleFormChange}
-                  placeholder="Description"
+                  placeholder="Repetições"
                 />
-                <Input
+                <Input2
                   type="text"
                   name="musculo_alvo"
                   value={form.musculo_alvo}
                   onChange={handleFormChange}
-                  placeholder="Muscle Target"
+                  placeholder="Músculo alvo"
                 />
-                <Input
+                <Input2
                   type="text"
                   name="url_tutorial"
                   value={form.url_tutorial}
                   onChange={handleFormChange}
                   placeholder="Tutorial URL"
                 />
-                <Input
+                <Input2
                   type="text"
                   name="dicas"
                   value={form.dicas}
                   onChange={handleFormChange}
-                  placeholder="Tips"
+                  placeholder="Dicas"
                 />
               </form>
             </div>
           ))}
         </div>
-        <button className={style.add} onClick={handleAddExercicio}>+</button>
+        
+        <div className={style.botoes}>
+          <button className={style.add} onClick={handleAddExercicio}>+</button>
+          <button className={style.remove} onClick={handleRemoveExercicio}>-</button>
+        </div>
+        
       </section>
     </div>
     
