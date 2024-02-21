@@ -13,12 +13,9 @@ export default function responder() {
                 </div>
                 <div className={style.janelaVerMais}>    
                     <div className={style.informacoesUsuario}>
-                        <div>
-                            <img className={style.profile} src={profile} alt=''/>
-                            <h1>Aluno Sobrenome</h1>
-                        </div>
-                        <textarea className={style.textarea} placeholder="Digite sua resposta..."></textarea>
-                        <button className={style.button}>Enviar</button>
+                        <h1>Professor Roberto</h1>
+                        <textarea className={style.textarea} placeholder="Digite seu aviso..."></textarea>
+                        <button className={style.button}>Enviar Aviso</button>
                     </div>
                 </div>
             </div>

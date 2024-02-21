@@ -15,7 +15,7 @@
 }
 
 .janelaVerMais {
-    background-color: white;
+    background-color: #ececec;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,6 +31,18 @@
     max-height: 500px; /* Ajuste conforme necessário */
     overflow-y: auto;
 }
+.button {
+    margin-top: 10px;
+    font-size: 20px;
+    text-decoration: none;
+    border-radius: 12px;
+    padding: 10px 10px;
+    color: #012a50;
+    background-color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+  }
 
 .informacoesUsuario {
     text-align: left;
