@@ -103,8 +103,8 @@ export default function CriarTreinos() {
         </div>
         
         <div className={style.botoes}>
+          {links.length > 0 && <button className={style.remove} onClick={handleRemoveExercicio}>-</button>}
           <button className={style.add} onClick={handleAddExercicio}>+</button>
-          <button className={style.remove} onClick={handleRemoveExercicio}>-</button>
         </div>
         
       </section>
