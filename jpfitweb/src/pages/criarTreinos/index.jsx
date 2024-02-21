@@ -5,10 +5,11 @@ import Header from "../../components/header";
 import logoFitCorreto from "../../assets/logoFitCorreto.png";
 
 export default function CriarTreinos() {
-  const [links, setLinks] = useState([]); // Add state for links
+  const [links, setLinks] = useState(["Treino 1"]); // Add state for links
 
   const handleAddLink = () => {
-    setLinks([...links, ""]); // Add an empty string to the links array
+    const newLink = `Treino ${links.length + 1}`;
+    setLinks([...links, newLink]); // Add a new link to the links array
   };
 
   return (
@@ -17,9 +18,9 @@ export default function CriarTreinos() {
       <section className={style.content}>
         <div className={style.profile}>
           <div className={style.links}>
-            <Link className={style.link} to="/criar-exercicios">Criar Treino</Link>
-            {links.map((link, index) => (
-              <Link key={index} className={style.link} to="/criar-exercicios">Criar Treino</Link>
+            <Link className={style.link} to="/criar-exercicios">Treino 1</Link>
+            {links.slice(1).map((link, index) => (
+              <Link key={index} className={style.link} to="/criar-exercicios">{link}</Link>
             ))}
             <button className={style.add} onClick={handleAddLink}>+</button>
           </div>

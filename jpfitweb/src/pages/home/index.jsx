@@ -13,8 +13,6 @@ export default function Home() {
           <img src={logoJP} className={style.logoJP} alt="" />
           <img src={logoFit} className={style.logoFit} alt="" />
         </div>
-
-        <Link className={style.criarTreinoLink}>Criar Treino</Link>
       </section>
     </div>
   );
