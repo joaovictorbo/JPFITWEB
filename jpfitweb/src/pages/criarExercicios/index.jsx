@@ -105,16 +105,17 @@ export default function CriarTreinos() {
                   onChange={handleFormChange}
                   placeholder="Dicas"
                 />
-                <button className={style.remove} onClick={() => handleRemoveExercicio(index)}>-</button>
               </form>
+              <button className={style.remove} onClick={() => handleRemoveExercicio(index)}>-</button>
             </div>
           ))}
         </div>
         
         <div className={style.botoes}>
           <button className={style.add} onClick={handleAddExercicio}>+</button>
-          <button className={style.submit} onClick={handleSubmit}>Enviar</button> {/* Add the submit button */}
         </div>
+
+        <button className={style.salvarBotao} onClick={handleSubmit}>Salvar</button>
         
       </section>
     </div>
