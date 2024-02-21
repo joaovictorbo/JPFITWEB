@@ -6,28 +6,15 @@ import Input2 from "../../components/input2/index.jsx";
 
 export default function CriarTreinos() {
   const [links, setLinks] = useState([]); // Add state for links
-  const [treino, setTreino] = useState(""); // Add state for treino
-  const [form, setForm] = useState({}); // Add state for form
 
   const handleAddExercicio = () => {
-    setLinks([...links, form]);
-    setForm({
-      name: links.name,
-      reps: links.reps,
-      sets: links.sets,
-      description: links.description,
-      musculo_alvo: links.musculo_alvo,
-      url_tutorial: links.url_tutorial,
-      dicas: links.dicas,
-    }); 
+    setLinks([...links, {}]);
   };
 
-  const handleTreinoChange = (e) => {
-    setTreino(e.target.value); // Update the treino state with the Input value
-  };
-
-  const handleFormChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value }); // Update the form state with the Input value
+  const handleFormChange = (e, index) => {
+    const updatedLinks = [...links];
+    updatedLinks[index] = { ...updatedLinks[index], [e.target.name]: e.target.value };
+    setLinks(updatedLinks);
   };
 
   const handleRemoveExercicio = (index) => {
@@ -56,53 +43,53 @@ export default function CriarTreinos() {
           {links.map((link, index) => (
             <div key={index} className={style.password}>
               <form>
-                <Input2
+                <input
                   type="text"
                   name="name"
-                  value={link.name}
-                  onChange={handleFormChange}
+                  value={link.name || ""}
+                  onChange={(e) => handleFormChange(e, index)}
                   placeholder="Nome"
                 />
-                <Input2
+                <input
                   type="text"
                   name="description"
-                  value={link.description}
-                  onChange={handleFormChange}
+                  value={link.description || ""}
+                  onChange={(e) => handleFormChange(e, index)}
                   placeholder="Descrição"
                 />
-                <Input2
+                <input
                   type="number"
                   name="sets"
-                  value={link.sets}
-                  onChange={handleFormChange}
+                  value={link.sets || ""}
+                  onChange={(e) => handleFormChange(e, index)}
                   placeholder="Sets"
                 />
-                <Input2
+                <input
                   type="text"
                   name="reps"
-                  value={link.reps}
-                  onChange={handleFormChange}
+                  value={link.reps || ""}
+                  onChange={(e) => handleFormChange(e, index)}
                   placeholder="Repetições"
                 />
-                <Input2
+                <input
                   type="text"
                   name="musculo_alvo"
-                  value={link.musculo_alvo}
-                  onChange={handleFormChange}
+                  value={link.musculo_alvo || ""}
+                  onChange={(e) => handleFormChange(e, index)}
                   placeholder="Músculo alvo"
                 />
-                <Input2
+                <input
                   type="text"
                   name="url_tutorial"
-                  value={link.url_tutorial}
-                  onChange={handleFormChange}
+                  value={link.url_tutorial || ""}
+                  onChange={(e) => handleFormChange(e, index)}
                   placeholder="Tutorial URL"
                 />
-                <Input2
+                <input
                   type="text"
                   name="dicas"
-                  value={link.dicas}
-                  onChange={handleFormChange}
+                  value={link.dicas || ""}
+                  onChange={(e) => handleFormChange(e, index)}
                   placeholder="Dicas"
                 />
               </form>
