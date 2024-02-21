@@ -7,18 +7,19 @@ import Input2 from "../../components/input2/index.jsx";
 export default function CriarTreinos() {
   const [links, setLinks] = useState([]); // Add state for links
   const [treino, setTreino] = useState(""); // Add state for treino
-  const [form, setForm] = useState({
-    name: "",
-    reps: "",
-    sets: 3,
-    description: "",
-    musculo_alvo: "",
-    url_tutorial: "",
-    dicas: ""
-  }); // Add state for form
+  const [form, setForm] = useState({}); // Add state for form
 
   const handleAddExercicio = () => {
-    setLinks([...links, ""]); // Add an empty string to the links array
+    setLinks([...links, form]);
+    setForm({
+      name: links.name,
+      reps: links.reps,
+      sets: links.sets,
+      description: links.description,
+      musculo_alvo: links.musculo_alvo,
+      url_tutorial: links.url_tutorial,
+      dicas: links.dicas,
+    }); 
   };
 
   const handleTreinoChange = (e) => {
@@ -29,8 +30,15 @@ export default function CriarTreinos() {
     setForm({ ...form, [e.target.name]: e.target.value }); // Update the form state with the Input value
   };
 
-  const handleRemoveExercicio = () => {
-    setLinks(links.slice(0, -1)); // Remove the last element from the links array
+  const handleRemoveExercicio = (index) => {
+    const updatedLinks = [...links];
+    updatedLinks.splice(index, 1); // Remove the element at the specified index from the links array
+    setLinks(updatedLinks);
+  };
+
+  const handleSubmit = () => {
+    const jsonData = JSON.stringify(links); // Convert the links array to JSON data
+    console.log(jsonData); // You can do whatever you want with the JSON data
   };
 
   return (
@@ -51,60 +59,61 @@ export default function CriarTreinos() {
                 <Input2
                   type="text"
                   name="name"
-                  value={form.name}
+                  value={link.name}
                   onChange={handleFormChange}
                   placeholder="Nome"
                 />
                 <Input2
                   type="text"
                   name="description"
-                  value={form.description}
+                  value={link.description}
                   onChange={handleFormChange}
                   placeholder="Descrição"
                 />
                 <Input2
                   type="number"
                   name="sets"
-                  value={form.sets}
+                  value={link.sets}
                   onChange={handleFormChange}
                   placeholder="Sets"
                 />
                 <Input2
                   type="text"
                   name="reps"
-                  value={form.reps}
+                  value={link.reps}
                   onChange={handleFormChange}
                   placeholder="Repetições"
                 />
                 <Input2
                   type="text"
                   name="musculo_alvo"
-                  value={form.musculo_alvo}
+                  value={link.musculo_alvo}
                   onChange={handleFormChange}
                   placeholder="Músculo alvo"
                 />
                 <Input2
                   type="text"
                   name="url_tutorial"
-                  value={form.url_tutorial}
+                  value={link.url_tutorial}
                   onChange={handleFormChange}
                   placeholder="Tutorial URL"
                 />
                 <Input2
                   type="text"
                   name="dicas"
-                  value={form.dicas}
+                  value={link.dicas}
                   onChange={handleFormChange}
                   placeholder="Dicas"
                 />
+                <button className={style.remove} onClick={() => handleRemoveExercicio(index)}>-</button>
               </form>
             </div>
           ))}
         </div>
         
         <div className={style.botoes}>
-          {links.length > 0 && <button className={style.remove} onClick={handleRemoveExercicio}>-</button>}
           <button className={style.add} onClick={handleAddExercicio}>+</button>
+          <button className={style.submit} onClick={handleSubmit}>Enviar</button> {/* Add the submit button */}
         </div>
         
       </section>
