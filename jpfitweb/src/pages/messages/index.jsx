@@ -113,7 +113,6 @@ export default function Messages() {
         </div>
       ))}
 
-      <Link to="/">Sair</Link>
     </div>
   );
 }
