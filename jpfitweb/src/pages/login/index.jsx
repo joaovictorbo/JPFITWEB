@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import style from "./style.module.css";
 import Logo from "../../assets/logoFit.png";
 import Input from "../../components/input/index"
@@ -11,20 +11,20 @@ import { useState } from "react";
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [isLoggedIn, setIsLoggedIn] = useState(true); // essa variavel precisa ser false
+  const [isLoggedIn, setIsLoggedIn] = useState(false); // essa variavel precisa ser false
 
   async function handleSignIn(data) {
-    const dados = await loginUser(data.username, data.password);
-    setIsLoggedIn(true); // Set isLoggedIn to true if login is successful
+    const dados = await loginUser(data.email, data.password);
   }
 
   const loginUser = async (username, password) => {
     try {
-      const response = await api.post('/tokens', {
+      const response = await api.post('/tokens/Professor', {
         email: username,
         password: password
       })
-        .then(async function (response) {
+        .then( (response) => {
+          setIsLoggedIn(true);
           return response.data;
         })
         .catch(function (error) {
@@ -42,13 +42,13 @@ export default function Login() {
         <img className={style.image} src={Logo} alt=""/>
 
         <div className={style.form}>
-          <Input type="text" placeholder="Email ou CPF" onChange={(e) => setEmail(e.target.value)} />
-          <Input type="password" placeholder="Senha" onChange={(e) => setPassword(e.target.value)} />
+          <input type="text" placeholder="Email ou CPF" onChange={(e) => setEmail(e.target.value)} />
+          <input type="password" placeholder="Senha" onChange={(e) => setPassword(e.target.value)} />
         </div>
         {isLoggedIn ? (
-          <Link className={style.loginButton} to="./home">Login</Link>
+          <Navigate className={style.loginButton} to="./home">Login</Navigate>
         ) : (
-          <button className={style.loginButton} onClick={() => handleSignIn(email, password)}>Login</button>
+          <button className={style.loginButton} onClick={() => handleSignIn({email, password})}>Login</button>
         )}
         <p className={style.cadastrar}>Não possui uma conta?  <Link className={style.cadastrarLink} to="/register">Cadastrar</Link></p>
       </div>
