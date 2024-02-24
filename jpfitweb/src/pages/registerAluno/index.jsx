@@ -13,15 +13,15 @@ export default function RegisterAluno() {
           <h1> Cadastrar Aluno </h1>
 
           <section className={style.form}>
-            <Input className={style.input} type="text" placeholder="Nome" />
-            <Input type="text" placeholder="Sobrenone" />
+            <input className={style.input} type="text" placeholder="Nome" />
+            <input type="text" placeholder="Sobrenone" />
             <div className={style.tel}>
-              <Input type="text" placeholder="+55" />
-              <Input type="tel" placeholder="DDD + Número" />
+              <input type="text" placeholder="+55" />
+              <input type="tel" placeholder="DDD + Número" />
             </div>
-            <Input type="text" placeholder="CPF" />
-            <Input type="email" placeholder="Email" />
-            <Input type="password" placeholder="Senha" />
+            <input type="text" placeholder="CPF" />
+            <input type="email" placeholder="Email" />
+            <input type="password" placeholder="Senha" />
           </section>
 
           <Link className={style.editarLink} to="/alunos">

@@ -2,7 +2,7 @@ import style from "./style.module.css";
 import { useState } from "react"; // Add this import statement
 import Header from "../../components/header";
 import logoFitCorreto from "../../assets/logoFitCorreto.png";
-import Input2 from "../../components/input2/index.jsx";
+import { Navigate } from "react-router-dom";
 
 export default function CriarTreinos() {
   const [links, setLinks] = useState([]); // Add state for links
