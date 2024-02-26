@@ -115,11 +115,9 @@ export default function Register() {
               value={formData.senha}
               onChange={handleChange}
             />
-            <div className={style.alingButton}>
             <button type="submit" className={style.editarLink}>
               Cadastrar
             </button>
-            </div>
           </form>
 
           <p className={style.login}>
