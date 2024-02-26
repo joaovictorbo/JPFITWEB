@@ -33,6 +33,13 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  justify-content: center;
+}
+
+.alingButton {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .tel {

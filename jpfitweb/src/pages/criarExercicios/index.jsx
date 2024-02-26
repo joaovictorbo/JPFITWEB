@@ -40,6 +40,7 @@ export default function CriarTreinos() {
       }
     };
     try {
+      let api;  //variavel criada para evitar o erro (corrigir)
       console.log(jsonData);
       const response = api.post('/treino',jsonData, {
         headers:{
