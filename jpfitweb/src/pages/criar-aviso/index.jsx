@@ -10,6 +10,7 @@ export default function Responder() {
   const [texto, settexto] = useState(''); // Add state for links
 
     const Emitiraviso = async (texto) => {
+      console.log(texto)
         try {
           const response = await api.post('/Avisos', {
             texto:texto
