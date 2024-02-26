@@ -6,42 +6,12 @@ import Header from "../../components/header";
 import logoFitCorreto from "../../assets/logoFitCorreto.png";
 
 export default function CriarTreinos() {
-  const [nametreinos, setnametreinos] = useState([]); // Add state for links
-  const navigate = useNavigate();
-  async function handlegettreinos() {
-    const dados = await gettreinos();
-    return dados;
-  }
-  useEffect(() => {
-    handlegettreinos();
-  }, []);
+  const [links, setLinks] = useState([]); // Initialize links state as an empty array
 
-  const handleClick = (treino) => {
-    localStorage.setItem('idTreino', treino.id);
-    navigate('/criar-exercicios');
-  }
-  const gettreinos = async () => {
-    try {
-      const response = await api.get(`/Plano/MeusPlanosAlunos/${localStorage.getItem('idAluno')}`, {
-        headers: {
-          'Authorization': `Bearer ${localStorage.getItem('token')}`
-        },
-      })
-        .then((response) => {
-          if (response.data.isTreino == false) {
-            navigate('/criar-exercicios');
-          } else {
-            const treinos = response.data.treinosComPlano[0].treinos;
-            setnametreinos(treinos);
-            return response.data;
-          }
-        })
-        .catch(function (error) {
-          window.alert('Treinos nao encontrados');
-        });
-      return response;
-    } catch (error) {
-      throw error;
+  const handleAddLink = () => {
+    const newLink = prompt("Insira o nome do treino: "); // Prompt the user to enter the name of the link
+    if (newLink) {
+      setLinks([...links, newLink]); // Add a new link to the links array if the user entered a name
     }
   };
   return (
@@ -50,11 +20,10 @@ export default function CriarTreinos() {
       <section className={style.content}>
         <div className={style.profile}>
           <div className={style.links}>
-            <ul>
-              {nametreinos && nametreinos.map((treino) => (
-                <button onClick={() => handleClick(treino.treino)} className={style.link}>{treino.treino && treino.treino.name}</button>
-              ))}
-            </ul>
+            {links.map((link, index) => (
+              <Link key={index} className={style.link} to="/criar-exercicios">{link}</Link>
+            ))}
+            <button className={style.add} onClick={handleAddLink}>+</button>
           </div>
         </div>
 
