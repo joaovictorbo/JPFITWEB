@@ -27,8 +27,6 @@
   text-align: center;
   font-weight: 700;
   font-size: 20px;
-  
-  
 }
 
 .menus button:hover,
@@ -36,7 +34,6 @@
   cursor: pointer;
   background-color: #012a50;
   color: white;
-  
 }
 
 .logo {

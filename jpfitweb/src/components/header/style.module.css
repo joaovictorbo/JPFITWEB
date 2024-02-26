@@ -1,5 +1,5 @@
 .header {
-  background-color: #012a50;
+  background-color: rgb(01, 42, 80);
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -40,6 +40,11 @@
 .linksMenu {
   color: #fff;
   text-decoration: none;
+}
+
+.linksMenu:hover{ 
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 5);
+  transition: 0.2s ease-in-out;
 }
 
 .sidebar {

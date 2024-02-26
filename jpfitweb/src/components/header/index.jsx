@@ -47,33 +47,33 @@ export default function Header() {
           {" "}
           <Link className={styles.linksMenu} to="/messages">
             {" "}
-            Mensagens{" "}
+            MENSAGENS{" "}
           </Link>
         </li>
         <li>
           {" "}
           <Link className={styles.linksMenu} to="/alunos">
-            Alunos
+            ALUNOS
           </Link>{" "}
         </li>
         <li>
           {" "}
           <Link className={styles.linksMenu} to="/alerts">
             {" "}
-            Avisos{" "}
+            AVISOS{" "}
           </Link>
         </li>
         <li>
           {" "}
           <Link className={styles.linksMenu} to="/meus-treinos">
-            Meus Treinos
+            MEUS TREINOS
           </Link>
         </li>
         <li>
           {" "}
           <Link className={styles.linksMenu} to="/profile">
             {" "}
-            Perfil{" "}
+            PERFIL{" "}
           </Link>
         </li>
       </ul>
@@ -87,7 +87,6 @@ export default function Header() {
             {" "}
             Alunos
           </Link>
-
           <Link className={styles.linkssidebar} to={"/alerts"}>
             Avisos
           </Link>
