@@ -3,45 +3,24 @@ import { useState } from "react"; // Add this import statement
 import { useNavigate } from "react-router-dom"; // Add this import statement
 import Header from "../../components/header";
 import logoFitCorreto from "../../assets/logoFitCorreto.png";
-import Input2 from "../../components/input2/index.jsx";
 import api from "../../components/api/api.js";
 
-export default function CriarTreinos() {
+export default function EditarExercicio() {
   const navigate = useNavigate();
-  const [links, setLinks] = useState([]); // Add state for links
-  const [categoria, setcategoria] = useState(""); // Add state for links
-  const [descricao, setDescricao] = useState(""); // Add state for links
   const [nometreino, setnometreino] = useState(""); // Add state for links
-
-
-  const handleAddExercicio = () => {
-    setLinks([...links, {}]);
-  };
-
-  const handleFormChange = (e, index) => {
-    const updatedLinks = [...links];
-    updatedLinks[index] = { ...updatedLinks[index], [e.target.name]: e.target.value };
-    setLinks(updatedLinks);
-  };
-
-  const handleRemoveExercicio = (index) => {
-    const updatedLinks = [...links];
-    updatedLinks.splice(index, 1); // Remove the element at the specified index from the links array
-    setLinks(updatedLinks);
-  };
+  const [text, setText] = useState(""); // Add state for text
+  const [description, setDescription] = useState(""); // Add state for description
+  const [sets, setSets] = useState(""); // Add state for sets
+  const [reps, setReps] = useState(""); // Add state for reps
+  const [musculo_alvo, setMusculoAlvo] = useState(""); // Add state for musculo_alvo
+  const [url_tutorial, setUrlTutorial] = useState(""); // Add state for url_tutorial
+  const [dicas, setDicas] = useState(""); // Add state for dicas
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const jsonData = {
-      exercicios: links,
-      treinos: {
-        name: nometreino,
-        categoria: categoria,
-        description: descricao
-      }
     };
     try {
-      console.log(jsonData);
       const response = api.post('/treino',jsonData, {
         headers:{
           'Authorization': `Bearer ${localStorage.getItem('token')}`
@@ -53,7 +32,7 @@ export default function CriarTreinos() {
           const response2 = api.post('/Plano/treinoUnico', {
             treinoId: response.data.treinoId,
             nome: "Treino 1",
-            user_id: localStorage.getItem('idAluno')
+            user_id: localStorage.getItem('idAluno').preventDefault()
           }, {
             headers:{
               'Authorization': `Bearer ${localStorage.getItem('token')}`
@@ -80,100 +59,66 @@ export default function CriarTreinos() {
   return (
     <div className={style.home}>
       <Header />
-      <section className={style.content}>
         <div className={style.logo}>
           <img className={style.logoFit} src={logoFitCorreto} alt="" />
         </div>
-        <input
-                  type="text"
-                  name="Categoria"
-                  value={categoria || ""}
-                  onChange={(e) => setcategoria(e.target.value) }
-                  placeholder="Categoria"
-                />
-        <input
-                  type="text"
-                  name="descrição"
-                  value={descricao|| ""}
-                  onChange={(e) => setDescricao(e.target.value)}
-                  placeholder="Descricao"
-                />
-        <input
-                  type="text"
-                  name="Nome do Treino"
-                  value={nometreino|| ""}
-                  onChange={(e) => setnometreino(e.target.value)}
-                  placeholder="Nome do treino"
-                />
         <div className={style.profile}>
           <div className={style.links}>
             <div className={style.link}>Exercícios</div>
           </div>
-          {links.map((link, index) => (
-            <div key={index} className={style.password}>
-              <form>
                 <input
                   type="text"
                   name="name"
-                  value={link.name || ""}
-                  onChange={(e) => handleFormChange(e, index)}
+                  value={text || ""}
+                  //onChange={(e) => handleFormChange(e, )}
                   placeholder="Nome"
                 />
                 <input
                   type="text"
                   name="description"
-                  value={link.description || ""}
-                  onChange={(e) => handleFormChange(e, index)}
+                  value={description || ""}
+                  //onChange={(e) => handleFormChange(e, )}
                   placeholder="Descrição"
                 />
                 <input
                   type="number"
                   name="sets"
-                  value={link.sets || ""}
-                  onChange={(e) => handleFormChange(e, index)}
+                  value={sets || ""}
+                  //onChange={(e) => handleFormChange(e, )}
                   placeholder="Sets"
                 />
                 <input
                   type="text"
                   name="reps"
-                  value={link.reps || ""}
-                  onChange={(e) => handleFormChange(e, index)}
+                  value={reps || ""}
+                  //onChange={(e) => handleFormChange(e, )}
                   placeholder="Repetições"
                 />
                 <input
                   type="text"
                   name="musculo_alvo"
-                  value={link.musculo_alvo || ""}
-                  onChange={(e) => handleFormChange(e, index)}
+                  value={musculo_alvo || ""}
+                  //onChange={(e) => handleFormChange(e, )}
                   placeholder="Músculo alvo"
                 />
                 <input
                   type="text"
                   name="url_tutorial"
-                  value={link.url_tutorial || ""}
-                  onChange={(e) => handleFormChange(e, index)}
+                  value={url_tutorial || ""}
+                  //onChange={(e) => handleFormChange(e)}
                   placeholder="Tutorial URL"
                 />
                 <input
                   type="text"
                   name="dicas"
-                  value={link.dicas || ""}
-                  onChange={(e) => handleFormChange(e, index)}
+                  value={dicas || ""}
+                  //onChange={(e) => handleFormChange(e, )}
                   placeholder="Dicas"
                 />
-              </form>
-              <button className={style.remove} onClick={() => handleRemoveExercicio(index)}>-</button>
-            </div>
-          ))}
-        </div>
-        
-        <div className={style.botoes}>
-          <button className={style.add} onClick={handleAddExercicio}>+</button>
-        </div>
 
         <button className={style.salvarBotao} onClick={handleSubmit}>Salvar</button>
         
-      </section>
+    </div>
     </div>
     
   );

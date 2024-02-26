@@ -21,7 +21,8 @@ import CriarTreinos from "./pages/criarTreinos/index";
 import RegisterAluno from "./pages/registerAluno";
 import CriarExercicios from "./pages/criarExercicios";
 import ResponderT from "./pages/responder/index";
-import CriarAviso from "./pages/criar-aviso/index";  
+import CriarAviso from "./pages/criar-aviso/index";
+import EditarExercicio from "./pages/editarExercicio";
 
 const router = createBrowserRouter([
   {
@@ -95,6 +96,10 @@ const router = createBrowserRouter([
   {
     path: "/criar-aviso",
     element: <CriarAviso />,
+  },
+  {
+    path: "/editar-exercicio",
+    element: <EditarExercicio />,
   },
   
 ]);

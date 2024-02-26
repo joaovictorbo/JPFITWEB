@@ -25,6 +25,7 @@ export default function Login() {
       })
         .then( (response) => {
           setIsLoggedIn(true);
+          localStorage.setItem("token", response.data.token);
           return response.data;
         })
         .catch(function (error) {

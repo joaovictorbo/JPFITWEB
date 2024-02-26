@@ -1,0 +1,132 @@
+.home {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile {
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.link {
+  background-color:#012a50;
+  border-radius: 15px;
+  width: 250px;
+  padding: 8px;
+  text-align: center;
+  font-weight: 400;
+  letter-spacing: -1px;
+  font-size: 32px;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.password {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 350px;
+  margin-bottom: 20px;
+}
+
+.botoes {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 250px;
+}
+
+.add {
+  background-color:rgb(209, 208, 208);
+  border-radius: 15px;
+  width: 200px;
+  padding: 8px;
+  align-self: center;
+  text-align: center;
+  font-weight: 400;
+  letter-spacing: -1px;
+  font-size: 32px;
+  color: #012a50;
+  text-decoration: none;
+  cursor: pointer;
+  border-style: solid;
+  border-color: rgb(209, 208, 208);
+}
+
+.remove {
+  background-color:rgb(209, 208, 208);
+  border-radius: 15px;
+  width: 200px;
+  padding: 8px;
+  text-align: center;
+  font-weight: 400;
+  letter-spacing: -1px;
+  font-size: 32px;
+  color: #012a50;
+  text-decoration: none;
+  cursor: pointer;
+  width: 30%;
+  border-style: solid;
+  border-color: rgb(209, 208, 208);
+}
+
+.salvarBotao {
+  position: fixed;
+  right: 7vw;
+  bottom: 40px;
+  background-color: #012a50;
+  border-radius: 80px;
+  width: 130px;
+  padding: 15px 20px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+  justify-content: flex-end;
+  border-style: solid;
+  border-color: #012a50;
+  cursor: pointer;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoFit {
+  width: 500px;
+}
+
+::-webkit-input-placeholder {
+  color: darkgray;
+  font-size: 16px;
+}
+
+input {
+  padding: 15px;
+  border-radius: 100px;
+  border: 0.5;
+  border-style: solid;
+  border-color: darkgray;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
