@@ -57,7 +57,7 @@ export default function Register() {
 
   return (
     <div className={style.register}>
-      <Header />
+    
       <section className={style.content}>
         <div className={style.contentForm}>
           <h1> Fazer Cadastro </h1>
@@ -122,7 +122,7 @@ export default function Register() {
 
           <p className={style.login}>
             Já possui uma conta?{" "}
-            <Link className={style.loginLink} to="/login">
+            <Link className={style.loginLink} to="/">
               Entrar
             </Link>
           </p>

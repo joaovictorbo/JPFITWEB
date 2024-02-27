@@ -3,6 +3,7 @@ import { useState } from "react"; // Add this import statement
 import { useNavigate } from "react-router-dom"; // Add this import statement
 import Header from "../../components/header";
 import logoFitCorreto from "../../assets/logoFitCorreto.png";
+import api from '../../components/api/api'
 import { Navigate } from "react-router-dom";
 
 export default function CriarTreinos() {
