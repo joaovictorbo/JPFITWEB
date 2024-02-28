@@ -52,7 +52,7 @@ export default function CriarTreinos() {
           localStorage.setItem('idTreino', response.data.treinoId);
           const response2 = api.post('/Plano/treinoUnico', {
             treinoId: response.data.treinoId,
-            nome: "Treino 1",
+            nome: nometreino,
             user_id: localStorage.getItem('idAluno')
           }, {
             headers:{
