@@ -84,30 +84,34 @@ export default function CriarTreinos() {
         <div className={style.logo}>
           <img className={style.logoFit} src={logoFitCorreto} alt="" />
         </div>
-        <input
-                  type="text"
-                  name="Categoria"
-                  value={categoria || ""}
-                  onChange={(e) => setcategoria(e.target.value) }
-                  placeholder="Categoria"
-                />
-        <input
-                  type="text"
-                  name="descrição"
-                  value={descricao|| ""}
-                  onChange={(e) => setDescricao(e.target.value)}
-                  placeholder="Descricao"
-                />
-        <input
-                  type="text"
-                  name="Nome do Treino"
-                  value={nometreino|| ""}
-                  onChange={(e) => setnometreino(e.target.value)}
-                  placeholder="Nome do treino"
-                />
+
         <div className={style.profile}>
+
           <div className={style.links}>
-            <div className={style.link}>Exercícios</div>
+            
+            <input
+              type="text"
+              name="Categoria"
+              value={categoria || ""}
+              onChange={(e) => setcategoria(e.target.value) }
+              placeholder="Categoria"
+            />
+            <input
+              type="text"
+              name="descrição"
+              value={descricao|| ""}
+              onChange={(e) => setDescricao(e.target.value)}
+              placeholder="Descricao"
+            />
+            <input
+              type="text"
+              name="Nome do Treino"
+              value={nometreino|| ""}
+              onChange={(e) => setnometreino(e.target.value)}
+              placeholder="Nome do treino"
+            />
+            
+          <div className={style.link}>Exercícios</div>
           </div>
           {links.map((link, index) => (
             <div key={index} className={style.password}>
@@ -162,6 +166,7 @@ export default function CriarTreinos() {
                   placeholder="Dicas"
                 />
               </form>
+            
               <button className={style.remove} onClick={() => handleRemoveExercicio(index)}>-</button>
             </div>
           ))}

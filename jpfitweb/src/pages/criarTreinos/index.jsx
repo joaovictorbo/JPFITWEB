@@ -23,13 +23,12 @@ export default function CriarTreinos() {
             {links.map((link, index) => (
               <Link key={index} className={style.link} to="/criar-exercicios">{link}</Link>
             ))}
-            <button className={style.add} onClick={handleAddLink}>+</button>
+          <Link className={style.add} to="/criar-exercicios">Criar treino</Link>
           </div>
         </div>
 
         <div className={style.logo}>
           <img className={style.logoFit} src={logoFitCorreto} alt="" />
-          <Link className={style.add} to="/criar-exercicios">Criar treino</Link>
         </div>
 
       </section>

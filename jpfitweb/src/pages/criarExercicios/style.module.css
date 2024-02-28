@@ -21,7 +21,18 @@
 .links {
   display: flex;
   flex-direction: column;
+  margin-top: 10px;
+  width: 350px;
+
+}
+
+.form2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 20px;
+  margin-top: 20px;
+  width: 350px;
 }
 
 .link {
@@ -36,6 +47,8 @@
   color: white;
   text-decoration: none;
   margin-bottom: 20px;
+  margin-top: 10px;
+  align-self: center;
 }
 
 .password {
