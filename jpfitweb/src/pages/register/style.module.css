@@ -62,6 +62,8 @@
   font-size: 18px;
   color: #012a50;
   text-decoration: none;
+  border-style: solid;
+  border-color: #fff;
 }
 
 .login {
