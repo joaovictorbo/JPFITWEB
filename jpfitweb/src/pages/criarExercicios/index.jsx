@@ -60,7 +60,7 @@ export default function CriarTreinos() {
             },
           })
             .then( (response2) => {
-              window.alert(response2.data);
+              window.alert(JSON.stringify(response2.data.mensagem));
               navigate('/criar-treino')
             })
             .catch(function (error) {
