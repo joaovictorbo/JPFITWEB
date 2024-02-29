@@ -8,6 +8,9 @@ import profile from "../../assets/fotoPerfilExemplo.png";
 import { useState } from "react";
 
 export default function Messages() {
+
+
+  
   const mensagens = [
     {
       img: "",

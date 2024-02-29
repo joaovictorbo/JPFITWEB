@@ -18,7 +18,7 @@ export default function CriarTreinos() {
 
   const handleClick = (treino) => {
     localStorage.setItem('idTreino', treino.id);
-    navigate('/criar-exercicios');
+    navigate('/editar-exercicio');
   }
   const gettreinos = async () => {
     try {

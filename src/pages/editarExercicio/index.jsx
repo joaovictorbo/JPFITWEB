@@ -18,39 +18,81 @@ export default function EditarExercicio() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const jsonData = {
-    };
+
     try {
-      const response = api.post('/treino',jsonData, {
+      const response = api.get(`/treino/treinoexercicios/${localStorage.getItem('idTreino')}`, {
         headers:{
           'Authorization': `Bearer ${localStorage.getItem('token')}`
         },
-      })
-        .then( (response) => {
+      }).then((info)=>{
+        console.log(info.data)
 
-          localStorage.setItem('idTreino', response.data.treinoId);
-          const response2 = api.post('/Plano/treinoUnico', {
-            treinoId: response.data.treinoId,
-            nome: "Treino 1",
-            user_id: localStorage.getItem('idAluno').preventDefault()
-          }, {
-            headers:{
-              'Authorization': `Bearer ${localStorage.getItem('token')}`
-            },
-          })
-            .then( (response2) => {
-              window.alert(response2.data);
-              navigate('/criar-treino')
-            })
-            .catch(function (error) {
+      }
+
+      ).catch(function (error) {
               window.alert('Erro ao enviar o treino.');
             });
-          return response.data;
-        })
-        .catch(function (error) {
-          window.alert('Erro ao enviar o treino.');
-        });
-      return response;
+      return response.data;
+    } catch (error) {
+      throw error;
+    }
+  }
+  const putTreino = (e)=>{
+    e.preventDefault();
+    const info  = {
+      categoria:'afasfasf',
+      name:'asfasf',
+      description:'dgsdg'
+    }
+
+    try {
+      const response = api.put(`/treino/${localStorage.getItem('idTreino')}`, info,{
+        headers:{
+          'Authorization': `Bearer ${localStorage.getItem('token')}`
+        },
+      }).then((info)=>{
+        console.log(info.data)
+
+      }
+
+      ).catch(function (error) {
+              window.alert('Erro ao enviar o treino.');
+            });
+      return response.data;
+    } catch (error) {
+      throw error;
+    }
+  }
+
+  const putExercicio = (e)=>{
+    e.preventDefault();
+    const info  = {
+      reps:'afasfasf',
+      tempo_descanço:'asfasf',
+      sets:'dgsdg',
+      name:'dgsdg',
+      description:'dgsdg',
+      dica:'dgsdg',
+      musculo_alvo:'dgsdg',
+      url_tutorial:'dgsdg'
+    }
+
+    try {
+      //pega o id do exercio de alguma forma, a api(tigaz) lhe passa isso no get dentro de uma lista
+      //agora vc faz a logica disso
+      const response = api.put(`/exercicio/${localStorage.getItem('idExercicio')}`, info,{
+        headers:{
+          'Authorization': `Bearer ${localStorage.getItem('token')}`
+        },
+      }).then((info)=>{
+        console.log(info.data)
+
+      }
+
+      ).catch(function (error) {
+              window.alert('Erro ao enviar o treino.');
+            });
+      return response.data;
     } catch (error) {
       throw error;
     }
@@ -64,7 +106,7 @@ export default function EditarExercicio() {
         </div>
         <div className={style.profile}>
           <div className={style.links}>
-            <div className={style.link}>Exercícios</div>
+            <div className={style.link}>Treino</div>
           </div>
                 <input
                   type="text"
@@ -116,7 +158,7 @@ export default function EditarExercicio() {
                   placeholder="Dicas"
                 />
 
-        <button className={style.salvarBotao} onClick={handleSubmit}>Salvar</button>
+        <button className={style.salvarBotao} onClick={putTreino}>Salvar</button>
         
     </div>
     </div>
