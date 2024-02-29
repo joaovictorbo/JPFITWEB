@@ -56,11 +56,13 @@ export default function CriarTreinos() {
               ))}
             </ul>
           </div>
+          <div className={style.links}>
+            <Link to="/criar-exercicios" className={style.link}>Criar novo treino</Link>
+          </div>      
         </div>
 
         <div className={style.logo}>
           <img className={style.logoFit} src={logoFitCorreto} alt="" />
-          <Link className={style.add} to="/criar-exercicios">Criar treino</Link>
         </div>
 
       </section>
