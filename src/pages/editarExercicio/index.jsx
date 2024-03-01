@@ -107,8 +107,31 @@ export default function EditarExercicio() {
   const handleEditExercicio = (id) => {
     localStorage.setItem('idExercicio', id);
     console.log(localStorage.getItem('idExercicio'));
-    navigate('/editar-exercicio-expecifico');
+    navigate('/editar-exercicio-especifico');
   }
+  const handleDeleteExercicio = (id) => {
+    try {
+      //pega o id do exercio de alguma forma, a api(tigaz) lhe passa isso no get dentro de uma lista
+      //agora vc faz a logica disso
+      const response = api.delete(`/exercicio/${id}`, {
+        headers: {
+          'Authorization': `Bearer ${localStorage.getItem('token')}`
+        },
+      }).then((info) => {
+        console.log(info.data)
+
+      }
+
+      ).catch(function (error) {
+        window.alert('Erro ao enviar o treino.');
+      });
+      return response.data;
+    } catch (error) {
+      throw error;
+    }
+  }
+
+
 
   return (
     <div className={style.home} onLoad={getExercicios}>
@@ -138,6 +161,7 @@ export default function EditarExercicio() {
               placeholder={`Exercicio ${exercicio.exercicio.musculo_alvo}`}
             />
           <button onClick={() => handleEditExercicio(exercicio.exercicio.id)}>editar</button>
+          <button onClick={() => handleDeleteExercicio(exercicio.exercicio.id)}>deletar</button>
 
           </div>
         ))}

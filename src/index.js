@@ -23,6 +23,7 @@ import CriarExercicios from "./pages/criarExercicios";
 import ResponderT from "./pages/responder/index";
 import CriarAviso from "./pages/criar-aviso/index";
 import EditarExercicio from "./pages/editarExercicio";
+import EditarExercicioEspecifico from "./pages/editarexercicioespecifico";
 
 const router = createBrowserRouter([
   {
@@ -100,6 +101,10 @@ const router = createBrowserRouter([
   {
     path: "/editar-exercicio",
     element: <EditarExercicio />,
+  },
+  {
+    path: "/editar-exercicio-especifico",
+    element: <EditarExercicioEspecifico />,
   },
   
 ]);

@@ -13,6 +13,8 @@ export default function Alunos() {
   
   let [conteudo, setConteudo] = useState([]);
   let [atual, setAtual] = useState({});
+  let [pagina, setPagina] = useState(1);
+  let [total, setTotal] = useState(0);
 
   async function handlegetalunos() {
     const dados = await getalunos();
@@ -21,21 +23,18 @@ export default function Alunos() {
 
   useEffect(() => {
     handlegetalunos();
-  }, []);
-
-  // Rest of the code...
-
+  }, [pagina]);
 
   const getalunos = async () => {
     try {
-      const response = await api.get('/Professor/users', {
+      const response = await api.get(`/Professor/users?page=${pagina}`, {
         headers:{
           'Authorization': `Bearer ${localStorage.getItem('token')}`
         },
       })
         .then( (response) => {
           setConteudo(response.data.listUser);
-          console.log(response.data);
+          setTotal(response.data.pagination.total);
           console.log(response.data.listUser);
           return response.data.listUser;
         })
@@ -142,6 +141,13 @@ export default function Alunos() {
                 <img className={style.icon} src={plus} alt="" />
               </Link>
             </div>
+          ))}
+        </div>
+        <div className={style.paginacao}>
+        {Array.from({ length: total }, (_, index) => (
+            <button key={index} onClick={() => setPagina(index + 1)}>
+              {index + 1}
+            </button>
           ))}
         </div>
       </section>
