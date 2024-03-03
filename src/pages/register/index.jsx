@@ -33,7 +33,7 @@ export default function Register() {
           return response.data
         })
         .catch(function (error) {
-          window.alert('Usuário ou senha incorretos')
+          window.alert('Erro ao cadastrar usuário')
         });
 
       return response;
