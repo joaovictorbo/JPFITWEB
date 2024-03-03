@@ -11,8 +11,7 @@ export default function Profile() {
       <section className={style.content}>
         <div className={style.profile}>
           <img src={fotoPerfil} alt="" />
-
-          <h1>Prof. Rennan Alves</h1>
+          <h1>Prof</h1>
           <div className={style.links}>
             <Link className={style.link} to="/user-data"> Dados Pessoais </Link>
             <Link className={style.link} to="/password-and-security">

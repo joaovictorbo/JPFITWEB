@@ -43,8 +43,6 @@ export default function EditarExercicioEspecifico() {
 
   const putExercicio = (e) => {
     try {
-      //pega o id do exercio de alguma forma, a api(tigaz) lhe passa isso no get dentro de uma lista
-      //agora vc faz a logica disso
       const response = api.put(`/exercicio/${localStorage.getItem('idExercicio')}`, {
         Reps: reps,
         Sets: sets,

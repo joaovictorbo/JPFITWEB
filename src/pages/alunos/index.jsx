@@ -120,7 +120,7 @@ export default function Alunos() {
           {Object.values(conteudo).map((aluno, index) => (
             <div className={style.aluno} key={index}>
               <img src={fotoPerfil} alt="" />
-              <h2>{aluno.name}</h2>
+              <h2>{aluno.name} {aluno.last_name}</h2>
               <button>
                 <Link to="/aluno-visualizar" className={style.link}>
                   Visualizar

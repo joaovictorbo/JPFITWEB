@@ -44,11 +44,11 @@ export default function Header() {
           />
         </li>
         <li>
-          {" "}
+          {/* {" "}
           <Link className={styles.linksMenu} to="/messages">
             {" "}
             MENSAGENS{" "}
-          </Link>
+          </Link> */}
         </li>
         <li>
           {" "}
@@ -65,9 +65,9 @@ export default function Header() {
         </li>
         <li>
           {" "}
-          <Link className={styles.linksMenu} to="/meus-treinos">
+          {/* <Link className={styles.linksMenu} to="/meus-treinos">
             MEUS TREINOS
-          </Link>
+          </Link> */}
         </li>
         <li>
           {" "}
@@ -80,9 +80,9 @@ export default function Header() {
 
       <div id="sidebar" className={styles.sidebar}>
         <div className={styles.menusidebar}>
-          <Link className={styles.linkssidebar} to={"/messages"}>
+          {/* <Link className={styles.linkssidebar} to={"/messages"}>
             Mensagens
-          </Link>
+          </Link> */}
           <Link className={styles.linkssidebar} to="/alunos">
             {" "}
             Alunos
@@ -90,9 +90,9 @@ export default function Header() {
           <Link className={styles.linkssidebar} to={"/alerts"}>
             Avisos
           </Link>
-          <Link className={styles.linkssidebar} to="/meus-treinos">
+          {/* <Link className={styles.linkssidebar} to="/meus-treinos">
             Meus Treinos
-          </Link>
+          </Link> */}
           <Link className={styles.linkssidebar} to="/profile">
             Perfil
           </Link>
