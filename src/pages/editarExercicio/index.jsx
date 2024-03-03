@@ -7,14 +7,7 @@ import api from "../../components/api/api.js";
 
 export default function EditarExercicio() {
   const navigate = useNavigate();
-  const [nometreino, setnometreino] = useState(""); // Add state for links
-  const [text, setText] = useState(""); // Add state for text
-  const [description, setDescription] = useState(""); // Add state for description
-  const [sets, setSets] = useState(""); // Add state for sets
-  const [reps, setReps] = useState(""); // Add state for reps
-  const [musculo_alvo, setMusculoAlvo] = useState(""); // Add state for musculo_alvo
-  const [url_tutorial, setUrlTutorial] = useState(""); // Add state for url_tutorial
-  const [dicas, setDicas] = useState(""); // Add state for dicas
+
   const [exercicios, setExercicios] = useState([]); // Add state for links
   const getExercicios = async () => {
     try {
@@ -47,11 +40,12 @@ export default function EditarExercicio() {
     }
 
     try {
-      const response = api.put(`/treino/${localStorage.getItem('idTreino')}`, info, {
+      const response = api.post(`/treino/${localStorage.getItem('idTreino')}`, info, {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`
         },
       }).then((info) => {
+        getExercicios()
         console.log(info.data)
 
       }
@@ -65,27 +59,31 @@ export default function EditarExercicio() {
     }
   }
 
-  const putExercicio = (e) => {
-    e.preventDefault();
+  const handleAddExercicio = () => {
     const info = {
-      reps: 'afasfasf',
-      tempo_descanço: 'asfasf',
-      sets: 'dgsdg',
-      name: 'dgsdg',
-      description: 'dgsdg',
-      dica: 'dgsdg',
-      musculo_alvo: 'dgsdg',
-      url_tutorial: 'dgsdg'
+      exercicios: [
+      {
+        reps: '1',
+        tempo_descanço: '30 sec',
+        sets: '3',
+        name: 'Agachamento',
+        description: 'Treino de Agachamento',
+        dica: 'use toda a amplitude do musculo',
+        musculo_alvo: 'coxa',
+        url_tutorial: '...'
+      }
+      ]
     }
 
     try {
       //pega o id do exercio de alguma forma, a api(tigaz) lhe passa isso no get dentro de uma lista
       //agora vc faz a logica disso
-      const response = api.put(`/exercicio/${localStorage.getItem('idExercicio')}`, info, {
+      const response = api.post(`/treino/ExercicioUnico/${localStorage.getItem('idTreino')}`, info, {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`
         },
       }).then((info) => {
+        getExercicios()
         console.log(info.data)
 
       }
@@ -99,10 +97,6 @@ export default function EditarExercicio() {
     }
   }
 
-  useEffect(() => {
-    getExercicios();
-  }
-    , []);
 
   const handleEditExercicio = (id) => {
     localStorage.setItem('idExercicio', id);
@@ -118,6 +112,7 @@ export default function EditarExercicio() {
           'Authorization': `Bearer ${localStorage.getItem('token')}`
         },
       }).then((info) => {
+        getExercicios()
         console.log(info.data)
 
       }
@@ -130,6 +125,9 @@ export default function EditarExercicio() {
       throw error;
     }
   }
+  useEffect(() => {
+    getExercicios();
+  }, []);
 
 
 
@@ -165,6 +163,7 @@ export default function EditarExercicio() {
 
           </div>
         ))}
+        <button className={style.adicionarExercicio} onClick={() => handleAddExercicio()}>Adicionar Exercicio</button>
 
         <button className={style.salvarBotao} onClick={putTreino}>Salvar</button>
 
