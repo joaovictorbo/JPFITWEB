@@ -186,7 +186,7 @@ export default function EditarExercicio() {
           <button className={style.adicionarExercicio} onClick={() => handleAddExercicio()}>Adicionar Exercicio</button>
 
           <button className={style.salvarBotao} onClick={putTreino}>Salvar</button>
-          <button onClick={() => DeleteTreino()}>Deletar Treino</button>
+          <button className={style.deletarTreino} onClick={() => DeleteTreino()}>Deletar Treino</button>
 
       </div>
     </div>

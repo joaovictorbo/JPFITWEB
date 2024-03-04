@@ -21,7 +21,8 @@
 .links {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  align-items: center;
+  gap: 5px;
 }
 
 .link {
@@ -35,7 +36,7 @@
   font-size: 32px;
   color: white;
   text-decoration: none;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .password {
@@ -129,6 +130,7 @@
   margin-bottom: 10px;
   text-align: center;
   font-size: 18px;
+  align-self: center;
   
 }
 
@@ -154,4 +156,22 @@ p{
   text-align: center;
   font-size: 18px;
   
+}
+
+.deletarTreino {
+  background-color:rgb(209, 208, 208);
+  border-radius: 15px;
+  width: 200px;
+  padding: 8px;
+  align-self: center;
+  text-align: center;
+  font-weight: 400;
+  letter-spacing: -1px;
+  font-size: 14px;
+  color: #012a50;
+  text-decoration: none;
+  cursor: pointer;
+  border-style: solid;
+  border-color: rgb(209, 208, 208);
+  margin-top: 10px;
 }
