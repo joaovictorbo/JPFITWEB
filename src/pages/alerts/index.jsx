@@ -2,35 +2,36 @@ import { Link } from "react-router-dom";
 import Header from "../../components/header";
 import style from "./style.module.css";
 import profile from "../../assets/fotoPerfilExemplo.png";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import api from "../../components/api/api";
 
 export default function Messages() {
-  const mensagens = [
-    {
-      img: "",
-      nome: "Pollyana Rodrigues",
-      mensagem:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 1111111111",
-      respondida: true,
-    },
-    {
-      nome: "Maria Eduarda",
-      mensagem:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 2222222222",
-      respondida: true,
-    },
-    {
-      nome: "José Santos",
-      mensagem:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 333333333",
-      respondida: false,
-    },
-  ];
 
-  let [conteudo, setConteudo] = useState(mensagens);
-
+  const Pegaraviso = async (texto) => {
+    try {
+      const response = await api.get('/Avisos/TodosAvisos',{
+        headers: {
+      'Authorization': `Bearer ${localStorage.getItem('token')}`
+    }},)
+        .then(async function (response) {
+          console.log(response.data)
+          setConteudo(response.data)
+        })
+        .catch(function (error) {
+          window.alert('Erro ao enviar o aviso.')
+        });
+    } catch (error) {
+        console.log(error)
+        throw error;
+        };
+    }
+  let [conteudo, setConteudo] = useState([]);
+    useEffect(() => {
+      Pegaraviso();
+    }
+    , []);
   return (
-    <div className={style.body} >
+    <div className={style.body} onLoad={Pegaraviso} >
     <Header />
     <Link className={style.buttonAlerta} to="/criar-aviso"> Criar Alerta </Link>
         
