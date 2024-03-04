@@ -9,6 +9,11 @@ export default function EditarExercicio() {
   const navigate = useNavigate();
 
   const [exercicios, setExercicios] = useState([]); // Add state for links
+  const [categoria, setCategoria] = useState(""); // Add state for links
+  const [name, setName] = useState(""); // Add state for links
+  const [description, setDescription] = useState(""); // Add state for links
+  const [treino, setTreino] = useState({}); // Add state for links
+
   const getExercicios = async () => {
     try {
       const response = api.get(`/treino/treinoexercicios/${localStorage.getItem('idTreino')}`, {
@@ -17,6 +22,7 @@ export default function EditarExercicio() {
         },
       }).then((info) => {
         setExercicios(info.data[0].exercicios);
+        setTreino(info.data[0].treino)
         return info.data;
 
       }
@@ -31,21 +37,21 @@ export default function EditarExercicio() {
   }
 
 
-  const putTreino = (e) => {
-    e.preventDefault();
+  const putTreino = () => {
     const info = {
-      categoria: 'afasfasf',
-      name: 'asfasf',
-      description: 'dgsdg'
+      categoria: categoria,
+      name: name,
+      description: description
     }
 
     try {
-      const response = api.post(`/treino/${localStorage.getItem('idTreino')}`, info, {
+      const response = api.put(`/treino/${localStorage.getItem('idTreino')}`, info, {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`
         },
       }).then((info) => {
         getExercicios()
+        navigate('/criar-treino')
         console.log(info.data)
 
       }
@@ -135,37 +141,33 @@ export default function EditarExercicio() {
     <div className={style.home} onLoad={getExercicios}>
       <Header />
       <div className={style.logo}>
+        
         <img className={style.logoFit} src={logoFitCorreto} alt="" />
       </div>
       <div className={style.profile}>
         <div className={style.links}>
           <div className={style.link}>Treino</div>
+          <p>Categoria:</p><input type="text" placeholder={`${treino.categoria}`} value={categoria} onChange={(e) => setCategoria(e.target.value)} />
+          <p>Nome:</p><input type="text" placeholder={`${localStorage.getItem('nomeTreino')}`} value={name} onChange={(e) => setName(e.target.value)} />
+          <p>Descrição:</p><input type="text" placeholder={`${treino.description}`} value={description} onChange={(e) => setDescription(e.target.value)} />
         </div>
         {exercicios.map((exercicio) => (
           
           <div key={exercicio.id}>
-            <input
-              type="text"
-              name="name"
-              value={exercicio.name || ""}
-              // onChange={(e) => handleFormChange(e)}
-              placeholder={`Exercicio ${exercicio.exercicio.name}`}
-            />
-            <input
-              type="text"
-              name="musculo_alvo"
-              value={exercicio.musculo_alvo || ""}
-              // onChange={(e) => handleFormChange(e)}
-              placeholder={`Exercicio ${exercicio.exercicio.musculo_alvo}`}
-            />
-          <button onClick={() => handleEditExercicio(exercicio.exercicio.id)}>editar</button>
-          <button onClick={() => handleDeleteExercicio(exercicio.exercicio.id)}>deletar</button>
+
+            <p className={style.p}>{exercicio.exercicio.name}</p>
+            <hr></hr>
+            <p className={style.p}>{exercicio.exercicio.musculo_alvo}</p>
+            <hr></hr>
+
+          <button className={style.edit} onClick={() => handleEditExercicio(exercicio.exercicio.id)}>Editar</button>
+          <button className={style.remove} onClick={() => handleDeleteExercicio(exercicio.exercicio.id)}>Deletar</button>
 
           </div>
         ))}
-        <button className={style.adicionarExercicio} onClick={() => handleAddExercicio()}>Adicionar Exercicio</button>
+          <button className={style.adicionarExercicio} onClick={() => handleAddExercicio()}>Adicionar Exercicio</button>
 
-        <button className={style.salvarBotao} onClick={putTreino}>Salvar</button>
+          <button className={style.salvarBotao} onClick={putTreino}>Salvar</button>
 
       </div>
     </div>

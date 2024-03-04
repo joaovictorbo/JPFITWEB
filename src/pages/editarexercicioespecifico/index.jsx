@@ -56,7 +56,7 @@ export default function EditarExercicioEspecifico() {
           'Authorization': `Bearer ${localStorage.getItem('token')}`
         },
       }).then((info) => {
-        console.log(info.data)
+        navigate('/editar-exercicio')
 
       }
 
@@ -88,7 +88,7 @@ export default function EditarExercicioEspecifico() {
         <div>
           <h2>Exercício:</h2>
           <p>Descrição: <input type="text"placeholder={`${exercicios.description}`} value={description} onChange={(e) => setDescription(e.target.value)} /></p>
-          <p>Musculo_Alvo: <input placeholder={`${exercicios.musculo_alvo}`} type="text" value={musculo_alvo} onChange={(e) => setMusculoAlvo(e.target.value)} /></p>
+          <p>Músculo_Alvo: <input placeholder={`${exercicios.musculo_alvo}`} type="text" value={musculo_alvo} onChange={(e) => setMusculoAlvo(e.target.value)} /></p>
           <p>Nome: <input placeholder={`${exercicios.name}`} type="text" value={name} onChange={(e) => setName(e.target.value)} /></p>
           <p>Repetições:  <input placeholder={`${exercicios.reps}`} type="text" value={reps} onChange={(e) => setReps(e.target.value)} /></p>
           <p>Séries: <input placeholder={`${exercicios.sets}`} type="text" value={sets} onChange={(e) => setSets(e.target.value)} /></p>
