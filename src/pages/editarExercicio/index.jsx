@@ -134,6 +134,24 @@ export default function EditarExercicio() {
   useEffect(() => {
     getExercicios();
   }, []);
+  const DeleteTreino = () => {
+    try {
+      const response = api.delete(`/treino/${localStorage.getItem('idTreino')}`, {
+        headers: {
+          'Authorization': `Bearer ${localStorage.getItem('token')}`
+        },
+      }).then((info) => {
+        navigate('/criar-treino')
+      }
+
+      ).catch(function (error) {
+        window.alert('Erro ao enviar o treino.');
+      });
+      return response.data;
+    } catch (error) {
+      throw error;
+    }
+  }
 
 
 
@@ -168,6 +186,7 @@ export default function EditarExercicio() {
           <button className={style.adicionarExercicio} onClick={() => handleAddExercicio()}>Adicionar Exercicio</button>
 
           <button className={style.salvarBotao} onClick={putTreino}>Salvar</button>
+          <button onClick={() => DeleteTreino()}>Deletar Treino</button>
 
       </div>
     </div>
