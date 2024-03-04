@@ -65,6 +65,7 @@
   border-style: solid;
   border-color: #fff;
   cursor: pointer;
+  margin: auto;
 }
 
 .login {
