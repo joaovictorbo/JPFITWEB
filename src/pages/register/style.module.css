@@ -100,9 +100,11 @@
   }
   .contentForm > h1 {
     font-size: 30px;
+    margin-top: 50px;
   }
 
   .form {
     width: 300px;
+    gap: 10px;
   }
 }
