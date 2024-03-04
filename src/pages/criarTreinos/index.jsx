@@ -50,14 +50,12 @@ export default function CriarTreinos() {
       <Header />
       <section className={style.content}>
         <div className={style.profile}>
-          <div className={style.links}>
-            <ul>
-              {nametreinos && nametreinos.map((treino) => (
-                <button onClick={() => handleClick(treino.treino)} className={style.link}>{treino.treino && treino.treino.name}</button>
-              ))}
-            </ul>
+          <div>
           </div>
           <div className={style.links}>
+              {nametreinos && nametreinos.map((treino) => (
+                <button  className={style.link} onClick={() => handleClick(treino.treino)}>{treino.treino && treino.treino.name}</button>
+              ))}
             <Link to="/criar-exercicios" className={style.link}>Criar novo treino</Link>
           </div>      
         </div>
