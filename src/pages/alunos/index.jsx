@@ -121,15 +121,6 @@ export default function Alunos() {
             <div className={style.aluno} key={index}>
               <img src={fotoPerfil} alt="" />
               <h2>{aluno.name} {aluno.last_name}</h2>
-              <button>
-                <Link to="/aluno-visualizar" className={style.link}>
-                  Visualizar
-                </Link>
-              </button>
-
-              <Link to="/aluno-visualizar" >
-                <img className={style.icon} src={olho} alt="" />
-              </Link>
 
               <button>
                 <Link to="/criar-treino" className={style.link} onClick={() => setidaluno(aluno.id)}>
