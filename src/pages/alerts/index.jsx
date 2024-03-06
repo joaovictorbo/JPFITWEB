@@ -7,15 +7,15 @@ import api from "../../components/api/api";
 
 export default function Messages() {
 
-  const Pegaraviso = async (texto) => {
+  const Pegaraviso = async () => {
     try {
       const response = await api.get('/Avisos/TodosAvisos',{
         headers: {
       'Authorization': `Bearer ${localStorage.getItem('token')}`
     }},)
         .then(async function (response) {
-          console.log(response.data)
-          setConteudo(response.data)
+          console.log(response.data.listUser)
+          setConteudo(response.data.listUser)
         })
         .catch(function (error) {
           window.alert('Erro ao enviar o aviso.')
@@ -35,15 +35,16 @@ export default function Messages() {
     <Header />
     <Link className={style.buttonAlerta} to="/criar-aviso"> Criar Alerta </Link>
         
-    {conteudo.map((mensagem, index) => (
+ {conteudo && conteudo.map((mensagem, index) => (
         <div className={style.janela} key={index}>
         <img className={style.profile} src={profile} alt="" />
         <div className={style.informacoesUsuario}>
-            <h1>{mensagem.nome}</h1>
-            <p>{mensagem.mensagem}</p>
+            <h1>{mensagem.name_professor}</h1>
+            <p>{mensagem.texto}</p>
         </div>
         </div>
-    ))}
+    ))}  
+  
     </div>
   );
 }
