@@ -6,7 +6,26 @@ import { useEffect, useState } from "react";
 import api from "../../components/api/api";
 
 export default function Messages() {
-
+  const Deleteaviso = async (id) => {
+    try {
+      const response = await api.delete(`/Avisos/${id}`,{
+        headers: {
+      'Authorization': `Bearer ${localStorage.getItem('token')}`
+    }},)
+        .then(async function (response) {
+          console.log(response.data)
+          Pegaraviso()
+        }
+        )
+        .catch(function (error) {
+          window.alert('Erro ao deletar o aviso.')
+        });
+    }
+    catch (error) {
+      console.log(error)
+      throw error;
+    };
+  }
   const Pegaraviso = async () => {
     try {
       const response = await api.get('/Avisos/TodosAvisos',{
@@ -14,7 +33,7 @@ export default function Messages() {
       'Authorization': `Bearer ${localStorage.getItem('token')}`
     }},)
         .then(async function (response) {
-          console.log(response.data.listUser)
+          console.log(response.data)
           setConteudo(response.data.listUser)
         })
         .catch(function (error) {
@@ -42,7 +61,9 @@ export default function Messages() {
             <h1>{mensagem.name_professor}</h1>
             <p>{mensagem.texto}</p>
         </div>
+        <button onClick={() => Deleteaviso(mensagem.id)} className={style.button}>deletar aviso</button>
         </div>
+        
     ))}  
   
     </div>
