@@ -34,8 +34,7 @@ export default function Alunos() {
       })
         .then( (response) => {
           setConteudo(response.data.listUser);
-          setTotal(response.data.pagination.total);
-          console.log(response.data.listUser);
+          setTotal(response.data.pagination.allpage);
           return response.data.listUser;
         })
         .catch(function (error) {
