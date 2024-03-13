@@ -134,9 +134,9 @@ export default function Alunos() {
             </div>
           ))}
         </div>
-        <div className={style.paginacao}>
+        <div>
         {Array.from({ length: total }, (_, index) => (
-            <button key={index} onClick={() => setPagina(index + 1)}>
+            <button className={style.paginacao} key={index} onClick={() => setPagina(index + 1)}>
               {index + 1}
             </button>
           ))}

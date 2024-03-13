@@ -72,7 +72,8 @@ export default function EditarExercicioEspecifico() {
   useEffect(() => {
     getExercicios();
   }
-    , []);
+    , []); 
+    
 
 
   return (

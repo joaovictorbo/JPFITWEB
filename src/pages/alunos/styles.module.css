@@ -43,6 +43,16 @@
   align-items: center;
 }
 
+.paginacao {
+  border: 0;
+  background-color: #012a50;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+  text-decoration: none;
+  margin: 5px;
+}
 
 .alunosList {
   max-width: 560px;

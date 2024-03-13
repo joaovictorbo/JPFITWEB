@@ -55,14 +55,17 @@ export default function Messages() {
     <Link className={style.buttonAlerta} to="/criar-aviso"> Criar Alerta </Link>
         
  {conteudo && conteudo.map((mensagem, index) => (
-        <div className={style.janela} key={index}>
+        <div className={style.geral} key={index}>
+        <div className={style.janela}>
         <img className={style.profile} src={profile} alt="" />
         <div className={style.informacoesUsuario}>
             <h1>{mensagem.name_professor}</h1>
             <p>{mensagem.texto}</p>
         </div>
-        <button onClick={() => Deleteaviso(mensagem.id)} className={style.button}>deletar aviso</button>
         </div>
+        <button className={style.buttonDelete} onClick={() => Deleteaviso(mensagem.id)}>Deletar</button>
+        </div>
+        
         
     ))}  
   
