@@ -1,7 +1,7 @@
 import Header from "../../components/header";
 import style from "./styles.module.css";
 import fotoPerfil from "../../assets/fotoPerfilExemplo.png";
-import Logo from "../../assets/logoPequena.png";
+import Logo from "../../assets/Logo.png";
 
 import { useState, useEffect } from "react";
 import api from "../../components/api/api.js";

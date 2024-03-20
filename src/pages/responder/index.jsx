@@ -1,7 +1,7 @@
 import Header from "../../components/header";
 import style from './style.module.css';
 import profile from "../../assets/fotoPerfilExemplo.png";
-import logo from '../../assets/logoFitJP.png';
+import logo from '../../assets/logoFit.png';
 
 export default function responder() {
     return(

@@ -2,7 +2,7 @@ import style from "./style.module.css";
 import { useState, useEffect } from "react"; // Add this import statement
 import { useNavigate } from "react-router-dom"; // Add this import statement
 import Header from "../../components/header";
-import logoFitCorreto from "../../assets/logoFitCorreto.png";
+import logoFitCorreto from "../../assets/Logo.png";
 import api from "../../components/api/api.js";
 
 export default function EditarExercicio() {

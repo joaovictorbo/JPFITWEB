@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react"; // Add this import statement
 import api from "../../components/api/api.js";
 import Header from "../../components/header";
-import logoFitCorreto from "../../assets/logoFitCorreto.png";
+import logoFitCorreto from "../../assets/Logo.png";
 
 export default function CriarTreinos() {
   const [nametreinos, setnametreinos] = useState([]); // Add state for links

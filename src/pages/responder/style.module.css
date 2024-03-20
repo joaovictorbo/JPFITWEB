@@ -69,7 +69,7 @@
 }
 
 .logo {
-    max-height: 150px; /* Defina a altura desejada */
+    max-height: 200px; /* Defina a altura desejada */
     object-fit: cover; /* Ajusta a imagem mantendo a proporção e cortando o excesso */
     width: auto;
     margin-top: 20px;

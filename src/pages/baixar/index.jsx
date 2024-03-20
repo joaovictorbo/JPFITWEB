@@ -35,7 +35,7 @@ export default function Baixar() {
   }
 
   const handleDownload = () => {
-    const fileUrl = require("../../components/app.apk");
+    const fileUrl = require("../../components/JoaoPessoaFit.apk");
     window.open(fileUrl);
   };
 
