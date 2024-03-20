@@ -24,11 +24,16 @@ import ResponderT from "./pages/responder/index";
 import CriarAviso from "./pages/criar-aviso/index";
 import EditarExercicio from "./pages/editarExercicio";
 import EditarExercicioEspecifico from "./pages/editarexercicioespecifico";
+import Baixar from "./pages/baixar";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Login />,
+  },
+  {
+    path: "/baixar",
+    element: <Baixar />,
   },
   {
     path: "/home",

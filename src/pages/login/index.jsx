@@ -51,7 +51,8 @@ export default function Login() {
         ) : (
           <button className={style.loginButton} onClick={() => handleSignIn({email, password})}>Login</button>
         )}
-        <p className={style.cadastrar}>Não possui uma conta?  <Link className={style.cadastrarLink} to="/register">Cadastrar</Link></p>
+        {/* <p className={style.cadastrar}>Não possui uma conta?  <Link className={style.cadastrarLink} to="/register">Cadastrar</Link></p> */}
+        <Link className={style.baixarLink} to="/baixar">Baixar App</Link>
       </div>
     </div>
   );

@@ -1,0 +1,100 @@
+.login {
+  background-image: url("../../assets/2.png");
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+}
+
+.image {
+  width: 300px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form input{
+  padding: 10px;
+  width: 380px;
+  border: 0;
+  border-radius: 0;
+  border-bottom: 3px solid white;
+  background-color: transparent;
+  outline: 0;
+  color: #ffffff;
+}
+
+
+::-webkit-input-placeholder {
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.loginButton {
+  margin: 40px 0 20px;
+  background-color: white;
+  color: #012a50;
+  border-radius: 80px;
+  width: 130px;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 20px;
+  border-style: solid;
+  border-color: white;
+  cursor: pointer;
+}
+.baixarButton {
+  background-color: white;
+  color: #012a50;
+  border-radius: 80px;
+  width: 130px;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 20px;
+  border-style: solid;
+  border-color: white;
+  cursor: pointer;
+}
+
+
+.cadastrar {
+  font-size: 16px;
+  margin: 0;
+  color: #ffffff;
+}
+
+.cadastrarLink {
+  color: #ffffff;
+}
+
+
+@media (max-width: 767px) {
+  .login {
+    background-image: url("../../assets/responsive/Fundo\ Login\ 1.png");
+  }
+
+  .image {
+    width: 200px;
+  }
+
+  .form input {
+    width: 250px;
+  }
+}
