@@ -25,11 +25,16 @@ import CriarAviso from "./pages/criar-aviso/index";
 import EditarExercicio from "./pages/editarExercicio";
 import EditarExercicioEspecifico from "./pages/editarexercicioespecifico";
 import Baixar from "./pages/baixar";
+import PoliticaPrivacidade from "./pages/politicaPrivacidade";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Login />,
+  },
+  {
+    path: "/politica-privacidade",
+    element: <PoliticaPrivacidade />,
   },
   {
     path: "/baixar",

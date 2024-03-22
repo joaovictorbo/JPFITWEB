@@ -46,6 +46,13 @@ export default function Login() {
           <input type="text" placeholder="Email ou CPF" onChange={(e) => setEmail(e.target.value)} />
           <input type="password" placeholder="Senha" onChange={(e) => setPassword(e.target.value)} />
         </div>
+
+        <p className={style.register}>
+            Não possui uma conta?{" "}
+            <Link className={style.registerLink} to="/register">
+              Registrar
+            </Link>
+        </p>
         {isLoggedIn ? (
           <Navigate className={style.loginButton} to="./home">Login</Navigate>
         ) : (

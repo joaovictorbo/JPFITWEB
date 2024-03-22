@@ -115,7 +115,7 @@ export default function Register() {
               value={formData.senha}
               onChange={handleChange}
             />
-            <button type="submit" className={style.editarLink}>
+            <button type="submit" className={style.cadastrarLink}>
               Cadastrar
             </button>
           </form>

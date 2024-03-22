@@ -73,10 +73,21 @@
   cursor: pointer;
 }
 
+.register {
+  font-size: 16px;
+  margin: 0;
+  color: #ffffff;
+}
+
+.registerLink {
+  color: #ffffff;
+}
+
 .cadastrar {
   font-size: 16px;
   margin: 0;
   color: #ffffff;
+  text-decoration: none;
 }
 
 .cadastrarLink {
