@@ -4,6 +4,9 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+input::placeholder {
+  color: #999999;
+}
 
 .content {
   display: flex;
@@ -113,8 +116,4 @@
   }
 }
 
-/* BEGIN: Add placeholder styles */
-input::placeholder {
-  color: #999999;
-}
-/* END: Add placeholder styles */
+
