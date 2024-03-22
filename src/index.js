@@ -26,6 +26,7 @@ import EditarExercicio from "./pages/editarExercicio";
 import EditarExercicioEspecifico from "./pages/editarexercicioespecifico";
 import Baixar from "./pages/baixar";
 import PoliticaPrivacidade from "./pages/politicaPrivacidade";
+import TermosCondicoes from "./pages/termosCondicoes";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
   {
     path: "/politica-privacidade",
     element: <PoliticaPrivacidade />,
+  },
+  {
+    path: "/termos-condicoes",
+    element: <TermosCondicoes />,
   },
   {
     path: "/baixar",

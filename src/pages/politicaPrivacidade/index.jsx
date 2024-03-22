@@ -1,5 +1,4 @@
 import style from "./style.module.css";
-import { Link, useNavigate } from "react-router-dom";
 import logoFit from "../../assets/logoFit.png";
 
 export default function Register() {
