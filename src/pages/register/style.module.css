@@ -3,7 +3,6 @@
   height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
-  
 }
 
 .content {
@@ -21,7 +20,6 @@
   flex-direction: column;
   width: 50vw;
   gap: 20px;
-
 }
 
 .contentForm > h1 {
@@ -46,6 +44,7 @@
 .tel input {
   width: 100%;
 }
+
 .tel input:nth-last-of-type(2) {
   width: 50px;
 }
@@ -87,6 +86,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .logoFit {
   width: 300px;
 }
@@ -101,6 +101,7 @@
   .contentForm {
     width: 300px;
   }
+
   .contentForm > h1 {
     font-size: 30px;
     margin-top: 50px;
@@ -111,3 +112,9 @@
     gap: 10px;
   }
 }
+
+/* BEGIN: Add placeholder styles */
+input::placeholder {
+  color: #999999;
+}
+/* END: Add placeholder styles */
