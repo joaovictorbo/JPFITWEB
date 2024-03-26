@@ -51,6 +51,9 @@
   color: #ffffff;
 }
 
+.form input::placeholder {
+  color: #ffffff;
+}
 
 ::-webkit-input-placeholder {
   color: #ffffff;
@@ -97,7 +100,7 @@
 
 @media (max-width: 767px) {
   .login {
-    background-image: url("../../assets/responsive/Fundo\ Login\ 1.png");
+    background-image: url("../../assets/2.png");
   }
 
   .image {

@@ -1,5 +1,5 @@
 .header {
-  background-color: rgb(01, 42, 80);
+  background-color: #08acb4;
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -19,7 +19,7 @@
 }
 
 .logoFit {
-  height: 30px;
+  width: 150px;
 }
 
 .imgMenu {

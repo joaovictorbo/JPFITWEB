@@ -1,7 +1,6 @@
 import styles from "./style.module.css";
 import { Link } from "react-router-dom";
-import logoJP from "../../assets/logoFitJP.png";
-import logoFit from "../../assets/logoFitNome.png";
+import logoFit from "../../assets/logoFit.png";
 import Menu from "../../assets/responsive/MenuFilled.svg";
 
 export default function Header() {
@@ -28,7 +27,6 @@ export default function Header() {
     <div className={styles.header}>
       <div className={styles.imagens}>
         <Link to={"/home"}>
-          <img src={logoJP} className={styles.logoJP} alt="" />
           <img src={logoFit} alt="" className={styles.logoFit} />
         </Link>
       </div>
@@ -42,13 +40,6 @@ export default function Header() {
             onClick={sidebar}
             alt=""
           />
-        </li>
-        <li>
-          {/* {" "}
-          <Link className={styles.linksMenu} to="/messages">
-            {" "}
-            MENSAGENS{" "}
-          </Link> */}
         </li>
         <li>
           {" "}
