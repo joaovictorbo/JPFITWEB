@@ -56,12 +56,6 @@ export default function Header() {
         </li>
         <li>
           {" "}
-          {/* <Link className={styles.linksMenu} to="/meus-treinos">
-            MEUS TREINOS
-          </Link> */}
-        </li>
-        <li>
-          {" "}
           <Link className={styles.linksMenu} to="/profile">
             {" "}
             PERFIL{" "}
